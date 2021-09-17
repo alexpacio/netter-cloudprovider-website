@@ -26,11 +26,10 @@ body {
   background:rgb(69, 78, 202);
 }
 
-
-
 .navbar-brand{
   text-indent: 90px;
   background: url('mockups/assets/images/main-page/logonetterULTIMO.svg');
+  background-repeat: no-repeat;
   width: 90px;
   height: 23px;
 }
@@ -42,7 +41,13 @@ body {
 .btnOrange:hover{
   background: rgb(192, 146, 21);
 }
-
+.btnBlue{
+  background:rgb(69, 78, 202);
+  text-decoration:none;
+}
+.btnBlue:hover{
+  background: rgb(192, 146, 21);
+}
 .btnWhite{
   background: white;
   color:black;
@@ -51,19 +56,4 @@ body {
 
 .btnWhite:hover{
   background: rgb(192, 146, 21);
-}
-
-.box{
-  align-items: center;
-  text-align: center;
-  width: 300px;
-  display: inline-block;
-}
-.mini-box{
-  background-position: center;
-  height: 80px;
-  width: 80px;
-}
-.center{
-  background: url(url) no-repeat center;
 }
