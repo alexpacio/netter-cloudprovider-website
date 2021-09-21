@@ -1,157 +1,154 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.88.1">
-    <title>Fixed top navbar example · Bootstrap v5.1</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/navbar-fixed/">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
-    
-
-    <!-- Bootstrap core CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-
-    
-    <!-- Custom styles for this template -->
-    <link href="navbar-top-fixed.css" rel="stylesheet">
+    <title>Netter - homepage (prova)</title>
+    <link href="homepage.css" rel="stylesheet">
   </head>
   <body>
-    
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bgazure">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Applicazioni</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Dispositivi</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Sessioni</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Listino</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">FAQ</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Blog</a>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <button class="btnOrange btn-lg btn-primary" id="button" style="text-align: center;" role="button">Inizia ora
-        
-        </button>
-      </form>
-    </div>
-  </div>
-</nav>
-
-<main class="containerA">
-  <div class="bg-light p-5 rounded" style="background-image: url(mockups/assets/images/main-page/home.png);
-  background-size: cover; height:300px; padding-top:80px;">
-    <h1>Netter Cloud Platform</h1>
-    <p class="lead">Un Cloud Computing diverso, </br>
-                     facile da usare, flessibile e dinamico.</p>
-    <a class="btnOrange btn-lg btn-primary" href="../components/navbar/" role="button">Crea un tenant con 300€ di credito</a>
-    <a class="btnWhite btn-lg btn-primary" role="button"> Cost calculator </a>
-    <a class="btnWhite btn-lg btn-primary" role="button"> Contattaci</a>
-  </div>
-</main>
-
-<main class="containerB" style="background-color: rgba(213, 213, 213, 0.419);height: 300px;">
-  <h1 style="text-align: center; color: blue;">Vantaggi</h1>
-  <div class="row">
-    <div class="col" style="text-align: center;margin-top: 60px; align-items: center;" >
-      <img src="mockups/assets/images/main-page/semplicita.svg" class="rounded" alt="align-items:center" width="80px" height="80px">
-     <p style="margin-top: 30px;">Semplicità d'uso </br> e  automazione dei processi.</p>
-    </div>
-    <div class="col" style="text-align: center;margin-top: 60px; align-items: center;" >
-      <img src="mockups/assets/images/main-page/performante.svg" class="rounded" alt="align-items:center" width="80px" height="80px">
-      <p style="margin-top: 30px;">Maggiorre efficenza </br>da innovazione tecnologiche.</p>
-    </div>
-    <div class="col" style="text-align: center;margin-top: 60px; align-items: center;" >
-      <img src="mockups/assets/images/main-page/hardware.svg" class="rounded" alt="align-items:center" width="80px" height="80px">
-      <p style="margin-top: 30px;">Risorse hardware dedicate</br> ad alte prestazioni.</p>
-    </div>
-  </div>
-</main>
-
-<main class="containerC">
-  <div class="row">
-    <h1 style="text-align: center; color: blue;">Applicazioni</h1>
-    <div class="col" style="height: 200px;">
-      <div class="card" style="width: 140px;height: 150px;margin:20px;text-align: center; background-color: orange; float: right;">
-        <div class="card-body">
-          <h5 class="card-title" style="color: white;">Server </br>di posta</h5>
-          <a href="#" class="btn btn-primary" style="position: absolute;left:5px;bottom:5px;">Installa</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col" style="height: 200px;">     
-       <div class="card" style="width: 140px;height: 150px;margin:20px;text-align: center; background-color: orange;float: right;">
-        <div class="card-body">
-          <h5 class="card-title" style="color: white;" >Database</br>SQL</h5>
-          <a href="#" class="btn btn-primary" style="position: absolute;left:5px;bottom:5px;">Installa</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col"style="height: 200px;">      
-      <div class="card" style="width: 140px;height: 150px;margin:20px;text-align: center; background-color: orange;float: left;">
-        <div class="card-body">
-          <h5 class="card-title"style="color: white;" >Centralino </br>Voip</h5>
-          <a href="#" class="btn btn-primary" style="position: absolute;left:5px;bottom:5px;">Installa</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col" style="height: 200px;">     
-       <div class="card" style="width: 140px;height: 150px;margin:20px;text-align: center;background-color: rgba(213, 213, 213, 0.419);float: left;">
-        <div class="card-body">
-          <h5 class="card-title">Calcola </br>costi</h5>
-          <a href="#" class="btn btn-primary" style="left:5px;bottom:5px;">Calcola costi</a>
-          <a href="#" class="btn btn-primary" style="position: absolute;left:5px;bottom:5px;">Installa</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</main>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-
+    <nav class="navbar navbar-expand-md navbar-light"style="background-color:darkslateblue;">
       
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">  
+          <img src="./mockups/assets/images/main-page/logonetterULTIMO.svg" class="img-fluid" alt="" width="100" height="40" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+           <li> <a class="nav-link active" aria-current="page" href="#" style="color: white;">Software</a></li>
+            <li><a class="nav-link" href="#" style="color: white;">Applicazioni</a></li>
+            <li><a class="nav-link" href="#" style="color: white;">Dispositivo</a></li>
+            <li><a class="nav-link" href="#" style="color: white;">Sessioni</a></li>
+            <li><a class="nav-link" href="#" style="color: white;">Listino</a></li>
+            <li><a class="nav-link" href="#" style="color: white;">Supporto</a></li>
+            <li><a class="nav-link" href="#" style="color: white;">FAQ</a></li>
+            <li><a class="nav-link" href="#" style="color: white;">Blog</a></li>
+            <form class="d-flex">
+            <button type="button" class="btn btn-warning" href="#">Inizia ora</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container-fluid" style="background-image: url(mockups/assets/images/main-page/home.png);background-size: cover; height:fit-content;padding-top: 80px;padding-bottom: 30px;">
+      <div style="background-color:transparent">
+         <h1>Netter Cloud Platform</h1>
+            <p class="lead">Un Cloud Computing diverso, </br>
+                      facile da usare, flessibile e dinamico.</p>
+                      <div class="d-grid gap-2 d-md-block">
+                        <button class="btn btn-primary" type="button">Crea un tenant con 300€ di credito</button>
+                        <button class="btn btn-primary" id="white-button" type="button"  style="border-color:black;color:black; background-color: white;">Cost calculator </button>
+                        <button class="btn btn-primary" type="button"  style="border-color:black;color:black;background-color: white;">Contattaci</button>
+                      </div>
+     </div>
+    </div>
+    
+    <main class="container-fluid" style="background-color: rgba(213, 213, 213, 0.419);height: fit-content;">
+      <h1 style="padding-top:15px;text-align: center; color: blue;">Vantaggi</h1>
+      <div class="row">
+        <div class="col" style="text-align: center;margin-top: 60px; align-items: center;" >
+          <img src="mockups/assets/images/main-page/semplicita.svg" class="rounded" alt="align-items:center" width="80px" height="80px">
+         <p style="margin-top: 30px;">Semplicità d'uso </br> e  automazione dei processi.</p>
+        </div>
+        <div class="col" style="text-align: center;margin-top: 60px; align-items: center;" >
+          <img src="mockups/assets/images/main-page/performante.svg" class="rounded" alt="align-items:center" width="80px" height="80px">
+          <p style="margin-top: 30px;">Maggiorre efficenza </br>da innovazione tecnologiche.</p>
+        </div>
+        <div class="col" style="text-align: center;margin-top: 60px; align-items: center;" >
+          <img src="mockups/assets/images/main-page/hardware.svg" class="rounded" alt="align-items:center" width="80px" height="80px">
+          <p style="margin-top: 30px;">Risorse hardware dedicate</br> ad alte prestazioni.</p>
+        </div>
+      </div>
+    </main>
+
+    <main class="container-fluid" style="height: fit-content;">
+          <h1 style="padding-top:30px;padding-bottom: 30px;text-align: center; color: blue;">Applicazioni</h1>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="card" style="width: 180px;height:200px;background-color: orange;">
+                <div class="card-body">
+                  <h3 class="card-title" style="color:white;text-align: center;">Server </br> di posta</h3>
+                  <a href="#" class="btn btn-primary btn-sm" style="position:absolute;bottom:5px;left:5px;;border-color:darkslateblue;background-color: darkslateblue;">installa</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card" style="width: 180px;height:200px;background-color: orange;">
+                <div class="card-body">
+                  <h3 class="card-title" style="color:white;text-align: center;">Database </br> SQL</h3>
+                  <a href="#" class="btn btn-primary btn-sm" style="position:absolute;bottom:5px;left:5px;;border-color:darkslateblue;background-color: darkslateblue;">installa</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card" style="width: 180px;height:200px;background-color: orange;">
+                <div class="card-body">
+                  <h3 class="card-title" style="color:white;text-align: center;">Centralino </br>Voip</h3>
+                  <a href="#" class="btn btn-primary btn-sm" style="position:absolute;bottom:5px;left:5px;;border-color:darkslateblue;background-color: darkslateblue;">installa</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card" style="width: 180px;height:200px;">
+                <div class="card-body">
+                  <h5 class="card-title" style="text-align: center;">Calcola costi</h5>
+                  <p style="font-size: small; margin-bottom:30px ;"> undefined text for this area  </br> undefined text for this area   </p>
+                  <a href="#" class="btn btn-primary btn-sm" style="position:absolute;bottom:40px;left:5px;border-color:black;color: black;background-color: white;">cost calculator</a>
+                  <a href="#" class="btn btn-primary btn-sm" style="position:absolute;bottom:5px;left:5px;border-color:darkslateblue;background-color: darkslateblue;">installa</a>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="btn btn-primary btn-sm" style="float:right;margin-top: 30px;margin-bottom: 30px;margin-right: 120px;width: fit-content;border-color:teal;background-color:teal;">Mostra tutte</a>
+          </div>
+    </main>
+
+    <main class="container-fluid" style="padding-bottom:30px;background-color:darkslateblue;height: fit-content;">
+      <h2 style="padding-top:30px;text-align: center;color: white;">  Fai una prova con credito gratuito  </h2>
+      <p style="text-align: center;color: white;">  scopri i vantaggi della piattaforma Netter</p>
+      <a href="#" class="btn btn-primary" style="width:100px;background-color: tomato;margin: auto;display: block;">Inizia ora</a>
+    </main>
+
+    <main class="container" style="height: fit-content;">
+
+      <h2 style="padding-bottom: 30px;padding-top:30px;text-align: center;">Elenco clienti</h2>
+      <div class="row">
+        <div class="col" style="margin:25px;height: 200px;width:200px;background-color: rgba(213, 213, 213, 0.419);">
+           <h3>Cliente 1</h3>
+           <p> Nome Azienda:________ </br> Dettagli:_______ </p>
+        </div>
+        <div class="col" style="margin:25px;height: 200px;width:200px;background-color: rgba(213, 213, 213, 0.419);">
+           <h3>Cliente 2</h3>
+           <p> Nome Azienda:________ </br> Dettagli:_______ </p>
+        </div> 
+        <div class="col"  style="margin:25px;height: 200px;width:200px;background-color: rgba(213, 213, 213, 0.419);">
+          <h3>Cliente 3</h3>
+          <p> Nome Azienda:________ </br> Dettagli:_______ </p>
+        </div>
+      </div>
+    
+    </main>
+
+    <footer class="bg-light text-center text-lg-start">
+ 
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2021 Netter. Tutti i diritti riservati
+        <a class="text-dark" style="margin-left: 50px;" href="#">Privacy policy</a>
+        <a class="text-dark"  style="margin-left: 50px;" href="#">Termini d'utilizzo</a>
+        <a class="text-dark"  style="margin-left: 50px;" href="#">Cookie</a>
+        <a class="text-dark"  style="margin-left: 50px;" href="#">Contatti</a>
+      </div>
+  
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
   </body>
 </html>

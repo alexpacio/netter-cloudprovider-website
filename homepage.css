@@ -1,0 +1,50 @@
+.navbar-nav > li{
+  margin-left:20px;
+  margin-right:20px;
+  border-bottom: 6px solid transparent;
+}
+
+li:hover{
+  border-bottom: 6px solid tomato;
+}
+
+li:active{
+  border-bottom: 6px solid tomato;
+}
+
+.btn{
+  margin-left: 30px;
+  background-color: tomato;
+  border-color: tomato;
+  color: white;
+
+}
+.btn:hover{
+  background-color: orangered;
+  border-color: orangered;
+
+  color: white;
+}
+
+.white-button{
+
+  background-color: white;
+  border-color: black;
+
+}
+
+.white-button:hover{
+  background-color: orangered;
+  border-color: orangered;
+
+  color: white;
+}
+
+.text-dark{
+  text-decoration: none;
+
+}
+.text-dark:hover{
+  color: goldenrod;
+  text-decoration:underline;
+}
