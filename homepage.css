@@ -8,174 +8,91 @@
     }
 }
 
+@media (min-width: 1200px) {
+  .app-row {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
 
 /* buttons custom style - start */
 
-#button1{
+.button-orange-to-red{
   color:black;
   background-color: #ff5353;
   border-color: #ff5353;
 }
 
-#button1:hover{
+.button-orange-to-red:hover{
   color:white;
   background-color: #c2102a;
   border-color: #c2102a;
 }
-
-#button2{
-  background-color:white;
-  border-color: black;
-  color: black;
-}
-
-#button2:hover{
-  background-color: black;
-  color: white;
-}
-
-
-#button3{
-  color:black;
-  background-color: #ff5353;
-  border-color: #ff5353;
-}
-
-#button3:hover{
-  color:white;
-  background-color: #c2102a;
-  border-color: #c2102a;
-}
-
-#button4{
+.button-red-card{
   position:absolute;
   bottom:5px;
   left:5px;
-  color:white;
+  color:black;
   background-color: #c2102a;
   border-color: #c2102a;
 }
 
-#button4:hover{
-  color:black;
+.button-red-card:hover{
+  color:white;
   background-color: #ff5353;
   border-color: #ff5353;
 }
 
-#button5{
+.button-white-to-black{
+  background-color:white;
+  border-color: black;
+  color: black;
+}
+
+.button-white-to-black:hover{
+  background-color: black;
+  color: white;
+}
+
+.button-white-card{
+  position: absolute;
+  left:75px;
+  bottom: 5px;
+  background-color:white;
+  border-color: black;
+  color: black;
+}
+.button-white-card:hover{
+  background-color: black;
+  color: white;
+}
+
+.button-black-to-white{
   background-color: black;
   border-color: black;
   color: white;
 }
 
-#button5:hover{
+.button-black-to-white:hover{
   background-color:white;
   border-color: black;
   color: black;
 }
-#button-grid{
-   position: absolute;
-   bottom:5px;
-   right: 5px;
-}
+
 
 /* buttons custom style - end */
+.front-card-title{
+  width: 100%;
+  color:white;
+  padding-top: 80px;
+}
 
-/* card style - start */
-
-.flip-card-3D-wrapper {
-  width: 235px;
-  height: 250px;
-  position: relative;
-  -o-perspective: 900px;
-  -webkit-perspective: 900px;
-  -ms-perspective: 900px;
-  perspective: 900px;
+.back-card-title{
+  color: #c50e29;
+  position: absolute;
+  margin-left: 10px;
   margin-top:10px;
-  margin-bottom: 10px;
 }
-#flip-card1,
-#flip-card2,
-#flip-card3,
-#flip-card4{
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  position: absolute;
-  -o-transition: all 1s ease-in-out;
-  -webkit-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-  -o-transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-
-.do-flip {
-  -o-transform: rotateY(-180deg);
-  -webkit-transform: rotateY(-180deg);
-  -ms-transform: rotateY(-180deg);
-  transform: rotateY(-180deg);
-}
-#flip-card-btn-turn-to-back1, #flip-card-btn-turn-to-front1 ,
-#flip-card-btn-turn-to-back2, #flip-card-btn-turn-to-front2 ,
-#flip-card-btn-turn-to-back3, #flip-card-btn-turn-to-front3 ,
-#flip-card-btn-turn-to-back4, #flip-card-btn-turn-to-front4 {
-  width: fit-content;
-  height: fit-content;
-  background: transparent;
-  cursor: pointer;
-  visibility: hidden;
-  border:none;
-}
-#flip-card1 .flip-card-front, #flip-card1 .flip-card-back,
-#flip-card2 .flip-card-front, #flip-card2 .flip-card-back,
-#flip-card3 .flip-card-front, #flip-card3 .flip-card-back,
-#flip-card4 .flip-card-front, #flip-card4 .flip-card-back{
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  position: absolute;
-  -o-backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  backface-visibility: hidden;
-  z-index: 2;
-  -webkit-box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
-  -moz-box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
-  box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
-}
-#flip-card1 .flip-card-front,
-#flip-card2 .flip-card-front,
-#flip-card3 .flip-card-front,
-#flip-card4 .flip-card-front{
-    background: #424242;
-    border:1px solid #424242;
-}
-#flip-card1 .flip-card-back,
-#flip-card2 .flip-card-back,
-#flip-card3 .flip-card-back,
-#flip-card4 .flip-card-back{
-    background: #eeee;
-    border: 1px solid #eeee;
-    -o-transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-}
-#flip-card1 .flip-card-front p, #flip-card1 .flip-card-back p,
-#flip-card2 .flip-card-front p, #flip-card2 .flip-card-back p,
-#flip-card3 .flip-card-front p, #flip-card3 .flip-card-back p,
-#flip-card4 .flip-card-front p, #flip-card4 .flip-card-back p{
-  color: grey;
-  display: block;
-  position: absolute;
-  top: 40%;
-  width: 100%;
-}
-
-/* card style - end */
 
 /* client flips - start*/
 
