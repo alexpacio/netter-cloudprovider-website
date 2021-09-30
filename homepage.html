@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.88.1">
+  <title>Netter - Home</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/navbar-fixed/">
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+
+  <link href="./shared css/navbar.css" rel="stylesheet">
+  <link href="./shared css/footer.css" rel="stylesheet">
+  <link href="./shared css/card-flipper.css" rel="stylesheet">
+  <link href="homepage.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-custom navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="file:///home/manse/git/netter/netter-cloudprovider-website/homepage.html">
+        <img src="./mockups/assets/images/main-page/logonetterULTIMO.svg" style="width:100px;height:40px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link " href="file:///home/manse/git/netter/netter-cloudprovider-website/software.html">Software</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Applicazioni</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Dispositivi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sessioni</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Listino</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Supporto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <button class="btn btn-sm btn-outline-success" type="submit" id="navbar-button">Inizia ora</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container-fluid container-top-homepage">
+    <div style="background-color:transparent">
+      <h1>Netter Cloud Platform</h1>
+      <p class="lead">Un Cloud Computing diverso, </br>
+        facile da usare, flessibile e dinamico.</p>
+      <div class="d-grid gap-2 d-md-block">
+        <button class="btn btn-primary button-orange-to-red" type="button">Crea un tenant con 300€ di credito</button>
+        <button class="btn btn-primary button-white-to-black" type="button">Cost calculator </button>
+        <button class="btn btn-primary button-white-to-black" type="button">Contattaci</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid container-vertical-padding container-with-icons">
+    <h2 class="container-title">Vantaggi</h2>
+    <div class="row" style="padding-top: 30px;">
+      <div class="col icon-column-style">
+        <img src="mockups/assets/images/main-page/semplicita.svg" class="rounded icon-img" alt="align-items:center" width="120px"
+          height="120px">
+        <p class="icons-paragraph">Semplicità d'uso </br> e automazione dei processi.</p>
+      </div>
+      <div class="col icon-column-style">
+        <img src="mockups/assets/images/main-page/performante.svg" class="rounded icon-img" alt="align-items:center" width="120px"
+          height="120px">
+        <p class="icons-paragraph">Maggiorre efficenza </br>da innovazione tecnologiche.</p>
+      </div>
+      <div class="col icon-column-style">
+        <img src="mockups/assets/images/main-page/hardware.svg" class="rounded icon-img" alt="align-items:center" width="120px"
+          height="120px">
+        <p class="icons-paragraph">Risorse hardware dedicate</br> ad alte prestazioni.</p>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="container container-vertical-padding">
+    <div class="row app-row">
+      <h2 class="text-center"> Applicazioni</h2>
+      <div class="col">
+        <div class="d-flex justify-content-center">
+             <div class="card">
+          <div class="front-face" >
+            <h3 class="front-card-title text-center">Server</br>di posta</h3>
+            <button type="button" class="btn btn-sm button-red-card">Installa</button>
+            <button class="card-flipper-button-front" onclick="flip(event)">
+              <img src="./mockups/assets/images/main-page/add_circle_white_24dp.svg">
+            </button>
+          </div>
+          <div class="back-face">
+            <h5 class="back-card-title">Server di posta</h5>
+                <p class="back-card-paragraph">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat.</p>
+                  <button type="button" class="btn btn-sm button-red-card">Installa</button>
+                <a href="#" class="btn btn-primary btn-sm button-white-card">Cost calculator</a>
+                <button class="card-flipper-button-back" onclick="flip(event)">
+                  <img src="./mockups/assets/images/main-page/remove_circle_black_24dp.svg">
+                </button>
+          </div>
+              </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="d-flex justify-content-center">
+             <div class="card">
+          <div class="front-face" >
+            <h3 class="front-card-title text-center">Database </br>SQL</h3>
+            <button type="button" class="btn btn-sm button-red-card">Installa</button>
+            <button class="card-flipper-button-front" onclick="flip(event)">
+              <img src="./mockups/assets/images/main-page/add_circle_white_24dp.svg">
+            </button>
+          </div>
+          <div class="back-face">
+            <h5 class="back-card-title">Database SQL</h5>
+                <p class="back-card-paragraph">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat.</p>
+                  <button type="button" class="btn btn-sm button-red-card">Installa</button>
+                <a href="#" class="btn btn-primary btn-sm button-white-card">Cost calculator</a>
+                <button class="card-flipper-button-back" onclick="flip(event)">
+                  <img src="./mockups/assets/images/main-page/remove_circle_black_24dp.svg">
+                </button>
+          </div>
+              </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="d-flex justify-content-center">
+             <div class="card">
+          <div class="front-face" >
+            <h3 class="front-card-title text-center">Centralino</br>Voip</h3>
+            <button type="button" class="btn btn-sm button-red-card">Installa</button>
+            <button class="card-flipper-button-front" onclick="flip(event)">
+              <img src="./mockups/assets/images/main-page/add_circle_white_24dp.svg">
+            </button>
+          </div>
+          <div class="back-face">
+            <h5 class="back-card-title">Centralino Voip</h5>
+                <p class="back-card-paragraph">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat.</p>
+                  <button type="button" class="btn btn-sm button-red-card">Installa</button>
+                <a href="#" class="btn btn-primary btn-sm button-white-card">Cost calculator</a>
+                <button class="card-flipper-button-back" onclick="flip(event)">
+                  <img src="./mockups/assets/images/main-page/remove_circle_black_24dp.svg">
+                </button>
+          </div>
+              </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="d-flex justify-content-center">
+             <div class="card">
+          <div class="front-face" >
+            <h3 class="front-card-title text-center">Lorem </br> Ipsum </h3>
+            <button type="button" class="btn btn-sm button-red-card">Installa</button>
+            <button class="card-flipper-button-front" onclick="flip(event)">
+              <img src="./mockups/assets/images/main-page/add_circle_white_24dp.svg">
+            </button>
+          </div>
+          <div class="back-face">
+            <h5 class="back-card-title">Lorem Ipsum</h5>
+                <p class="back-card-paragraph">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat.</p>
+                  <button type="button" class="btn btn-sm button-red-card">Installa</button>
+                <a href="#" class="btn btn-primary btn-sm button-white-card">Cost calculator</a>
+                <button class="card-flipper-button-back" onclick="flip(event)">
+                  <img src="./mockups/assets/images/main-page/remove_circle_black_24dp.svg">
+                </button>
+          </div>
+              </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="row app-row">
+      <div class="d-flex justify-content-center">
+        <button type="button"style="margin:15px" class="btn btn-primary button-black-to-white">Mostra tutte</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid colored-bar">
+    <h2 class="bar-header"> Fai una prova con credito gratuito </h2>
+    <p class="bar-paragraph"> scopri i vantaggi della piattaforma Netter</p>
+    <div class="d-flex justify-content-center">
+      <button type="button"style="margin:15px" class="btn btn-primary button-black-to-white">Inizia ora</button>
+    </div>
+  </div>
+
+  <div class="container container-vertical-padding">
+
+    <h2 class="container-title">Elenco clienti che usano Netter
+    </h2>
+    <div class="row">
+      <div class="col">
+        <div class="d-flex justify-content-center">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="./mockups/client_svg/client1.svg" alt="Avatar" style="width:250px;height:200px;">
+              </div>
+              <div class="flip-card-back">
+                <h3>Azienda Traslochi</h3>
+                <p>azienda che si occupa di traslochi.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="d-flex justify-content-center">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="./mockups/client_svg/client2.svg" alt="Avatar" style="width:250px;height:200px;">
+              </div>
+              <div class="flip-card-back">
+                <h3>Azienda Bus</h3>
+                <p>azienda che si occupa di trasporto pubblico via bus.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="d-flex justify-content-center">
+          <div class="flip-card" >
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="./mockups/client_svg/client3.svg" alt="Avatar" style="width:250px;height:200px;">
+              </div>
+              <div class="flip-card-back">
+                <h3>Azienda Treni</h3>
+                <p>azienda che si occupa di trasporto pubblico via treno.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="d-flex justify-content-center">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="./mockups/client_svg/client4.svg" alt="Avatar" style="width:250px;height:200px;">
+              </div>
+              <div class="flip-card-back">
+                <h3>Architetti</h3>
+                <p>azienda che si occupa del design di edifici.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="bg-dark text-center text-lg-start">
+
+    <div class="text-center p-3" style="color: white;">
+      © 2021 Netter. Tutti i diritti riservati
+      <a class="text" style="margin-left: 50px;" href="#">Privacy policy</a>
+      <a class="text" style="margin-left: 50px;" href="#">Termini d'utilizzo</a>
+      <a class="text" style="margin-left: 50px;" href="#">Cookie</a>
+      <a class="text" style="margin-left: 50px;" href="#">Contatti</a>
+    </div>
+
+  </footer>
+
+  <script src="./card-flipper.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

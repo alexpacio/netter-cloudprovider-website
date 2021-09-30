@@ -12,9 +12,8 @@
 
 
 .card {
-  min-width: 235px;
-  width: 235px;
-  height: 250px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   transition: transform 2s;
   transform-style: preserve-3d;
   cursor: pointer;
