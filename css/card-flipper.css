@@ -1,0 +1,76 @@
+.card-flipper-button-front, .card-flipper-button-back{
+  width: fit-content;
+  height: fit-content;
+  background: transparent;
+  cursor: pointer;
+  border:none;
+
+}
+
+
+.card {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: transform 2s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+
+.front-face , .back-face {
+  width: 100%;
+  border-radius: 5px;
+  position: absolute;
+  backface-visibility: hidden !important;
+}
+
+
+
+.front-face {
+  background-color: #424242;
+  color: white;
+}
+
+.back-face {
+  background-color: #eeee;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+.front-card-title{
+  width: 100%;
+  color:white;
+  padding-top: 15px;
+}
+
+.back-card-title{
+  color: #c50e29;
+  margin: 5px;
+}
+
+
+.back-card-paragraph{
+  text-align: left;
+  color: black;
+  margin: 5px;
+  font-size: small;
+}
+
+.front-face > .d-flex.justify-content-between{
+  width: 95%;
+  margin:5px;
+  position: absolute;
+  bottom: 2px;
+}
+
+.front-grid-row, .back-grid-row{
+  width: 100%;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+  position: absolute;
+  bottom: 5px;
+  right: 0px;
+  overflow: hidden;
+}

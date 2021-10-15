@@ -1,0 +1,104 @@
+.container-top-page{
+  background-image: url(file:///home/manse/git/netter/netter-cloudprovider-website/img/bg_home.jpg);
+  background-size: cover;
+   height:fit-content;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 120px;
+   padding-bottom: 50px;
+}
+
+@media (min-width: 550px) {
+  .container-top-page {
+      padding-left: 100px;
+    }
+}
+
+.colored-bar-red{
+  padding-bottom:30px;
+  background-color:#ff5353;
+  height: fit-content;
+}
+
+.bar-red-header{
+  padding-top:30px;
+  text-align: center;
+  color: black;
+}
+
+.bar-red-paragraph{
+  text-align: center;
+  color: white;
+}
+
+.colored-bar-dark{
+  padding-bottom:30px;
+  background-color:#424242;
+  height: fit-content;
+}
+
+.bar-dark-paragraph{
+  padding-top: 25px;
+  text-align: center;
+  color: white;
+}
+
+p.text-center{
+  margin-top: 0;
+}
+
+.card{
+  width: 200px;
+  height: 200px;
+}
+
+.icon-img{
+  width:100px;
+  height:100px;
+  margin-top:30px;
+  }
+
+.front-face{
+  background-color: #eeee;
+  color: #c2102a;
+}
+.back-face{
+  background-color: #424242;
+  color: white;
+}
+
+
+.container-vertical-padding{
+  height: fit-content;
+   padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+
+.container-title{
+  padding-bottom: 0;
+  text-align: center;
+  color:#c50e29;
+}
+
+.icon-card-front-title{
+  text-align: center;
+  color:#c50e29;
+
+}
+.icon-card-back-title{
+  color:white;
+  margin: 5px;
+
+}
+.icon-card-paragraph{
+  color: white;
+  margin: 5px;
+  padding-bottom: 30px;
+  
+}
+
+.button-orange-to-red, button.btn.btn-primary.button-white-to-black{
+  max-width: 280px;
+}

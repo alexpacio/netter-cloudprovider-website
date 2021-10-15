@@ -1,0 +1,85 @@
+.button-orange-to-red{
+  color:black;
+  background-color: #ff5353;
+  border-color: #ff5353;
+}
+
+.button-orange-to-red:hover{
+  color:white;
+  background-color: #c2102a;
+  border-color: #c2102a;
+}
+
+.button-red-to-orange{
+    color:white;
+    background-color: #c2102a;
+    border-color: #c2102a;
+  }
+  
+  .button-red-to-orange:hover{
+    color:black;
+    background-color: #ff5353;
+    border-color: #ff5353;
+  }
+  
+.button-white-to-black{
+    background-color:white;
+    border-color: black;
+    color: black;
+  }
+  
+  .button-white-to-black:hover{
+    background-color: black;
+    color: white;
+  }
+
+
+.button-black-to-white{
+    background-color: black;
+    border-color: black;
+    color: white;
+  }
+  
+  .button-black-to-white:hover{
+    background-color:white;
+    border-color: black;
+    color: black;
+  }
+  
+
+.button-red-card{
+  color:black;
+  background-color: #c2102a;
+  border-color: #c2102a;
+}
+
+.button-red-card:hover{
+  color:white;
+  background-color: #ff5353;
+  border-color: #ff5353;
+}
+
+.button-white-card{
+  left:75px;
+  bottom: 5px;
+  background-color:white;
+  border-color: black;
+  color: black;
+}
+.button-white-card:hover{
+  background-color: black;
+  color: white;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+button:active {
+  outline: none;
+  box-shadow: none;
+}

@@ -1,0 +1,91 @@
+.container-top-page{
+  background-image: url(file:///home/manse/git/netter/netter-cloudprovider-website/img/bg_sessioni.jpg);
+  background-size: 100% 100%;
+   height:fit-content;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 120px;
+   padding-bottom: 50px;
+}
+
+@media (min-width: 550px) {
+  .container-top-page {
+      padding-left: 100px;
+    }
+}
+
+.template-frame{
+  background-color: white;
+  margin: 30px;
+  border-radius: 5px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.template-frame-title{
+  padding-bottom: 0;
+  text-align: center;
+  color:#c50e29;
+  position: relative;
+}
+.template-frame-paragraph{
+  color: black;
+  text-align: center;
+   margin: 10px;
+}
+
+
+
+.container-vertical-padding{
+  height: fit-content;
+   padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+
+.container-title{
+  padding-bottom: 0;
+  text-align: center;
+  color:#c50e29;
+}
+
+button.btn.btn-primary.button-white-to-black{
+  max-width: 280px;
+}
+
+
+.template-card{
+  background-color: #424242;
+  min-width: 235px;
+  width: 300px;
+  height: fit-content;
+}
+@media (min-width:550px) {
+  .template-card{
+    width: 500px;
+  }
+  
+}
+
+.template-card-title{
+  text-align: center;
+  color: white;
+}
+
+.show-template-button{
+  width: fit-content;
+  color: white;
+   }
+
+.show-template-button:hover{
+  color: #eeee;
+   }
+     
+
+.card-flipper-button-front, .card-flipper-button-back{
+  color:white;
+}
+.template-card .btn{
+  padding:1px 4px;
+  margin:3px;
+}
