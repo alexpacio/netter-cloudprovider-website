@@ -12,7 +12,6 @@ createFlipCard("Lorem Ipsum 6", loremIpsumText);
 createFlipCard("Lorem Ipsum 7", loremIpsumText);
 createFlipCard("Lorem Ipsum 8", loremIpsumText);
 createFlipCard("Lorem Ipsum 9", loremIpsumText);
-console.log("code ended");
 
 
 
@@ -107,8 +106,6 @@ function createFlipCard(title, backFaceParagraph) {
     newCard.style.height=frontHeight.toString()+'px';
     newFrontFace.style.height=frontHeight.toString()+'px';
   }
-
-
 }
 
 
