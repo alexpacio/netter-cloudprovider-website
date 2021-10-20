@@ -1,0 +1,111 @@
+.list-wrapper{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.list-item{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.container-top-page{
+  background-image: url(file:///home/manse/git/netter/netter-cloudprovider-website/img/bg_applicazioni.jpg);
+  background-size:100% 100%;
+   height:fit-content;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 120px;
+   padding-bottom: 100px;
+}
+
+@media (min-width: 550px) {
+  .container-top-page {
+      padding-left: 100px;
+    }
+}
+
+.row{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Typograph style */
+
+.container-title{
+  padding-bottom: 20px;
+  text-align: center;
+  color:#c50e29;
+}
+
+
+.container-vertical-padding{
+  height: fit-content;
+   padding-top: 0;
+  padding-bottom: 50px;
+}
+
+.colored-bar{
+  padding-bottom:30px;
+  background-color: #424242;
+  height: fit-content;
+  margin-bottom: 60px;
+}
+
+.bar-header{
+  padding-top:30px;
+  text-align: center;
+  color:white;
+}
+
+.bar-paragraph{
+  text-align: center;
+  color: white;
+}
+
+
+.button-orange-to-red, button.btn.btn-primary.button-white-to-black{
+  max-width: 280px;
+}
+
+.card{
+  min-width: 235px;
+  width: 235px;
+  height: 250px;
+}
+
+/*pagination style*/
+
+.simple-pagination ul{
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  margin-top: 10px;
+  }
+  
+  .simple-pagination li{
+    display:inline-block;
+    margin: 2px;
+  }
+  
+  .simple-pagination li a,
+  .simple-pagination li span{
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    text-align: center;
+    text-decoration: none;
+    color: #685f5f;
+    border:none;
+    margin: 5px;
+  }
+  .simple-pagination li a:hover{
+    background-color: #fff;
+    color:black;
+  }
+  
+  .simple-pagination .current{
+    background-color: #fff;
+    color:black;
+  }
+  

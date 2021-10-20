@@ -1,0 +1,114 @@
+
+input.form-control{
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.white-field{
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+
+
+#resources-container .button-red-card{
+  width: fit-content;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.datacenter-1-card , .datacenter-2-card{
+  background-color: #424242;
+  border-radius: 4px;
+  height: fit-content;
+}
+
+.datacenter-1-card{
+  background-color: #424242;
+  width: fit-content;
+}
+.datacenter-2-card{
+  background-color: #eeee;
+}
+
+.datacenter-1-title{
+  margin-top:10px;
+  margin-bottom:10px;
+  text-align: center;
+  color: white;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+div.d-flex.justify-content-around{
+  margin-top:20px;
+  margin-bottom:20px;
+  
+}
+
+@media (min-width: 550px) {
+  .datacenter-1-card , .datacenter-2-card{
+    min-width: 500px;
+  }
+}
+
+
+.container-top-page{
+  background-image: url(file:///home/manse/git/netter/netter-cloudprovider-website/img/bg_listino.png);
+  background-size:100% 100%;
+   height:fit-content;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 120px;
+   padding-bottom: 50px;
+}
+
+@media (min-width: 550px) {
+  .container-top-page{
+      padding-left: 100px;
+    }
+}
+
+.connection-card{
+  background-color: #eeee;
+}
+
+.card{
+  width: 250px;
+}
+
+@media (min-width: 550px) {
+  .card{
+      width: 500px;
+    }
+}
+
+.container-title{
+  padding-bottom: 0;
+  text-align: center;
+  color:#c50e29;
+}
+
+.datacenter-card-2-title{
+  color: #c50e29;
+}
+
+
+.datacenter-card-2-paragraph{
+  color: black;
+}
+
+
+.container-vertical-padding{
+  height: fit-content;
+   padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+div.container > div.d-flex.justify-content-evenly > button{
+  height: fit-content;
+  width: fit-content;
+}
+

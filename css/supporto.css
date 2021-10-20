@@ -1,0 +1,16 @@
+
+.container-top-page{
+  background-image: url(file:///home/manse/git/netter/netter-cloudprovider-website/img/bg_home.jpg);
+  background-size: cover;
+   height:fit-content;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 120px;
+   padding-bottom: 50px;
+}
+
+@media (min-width: 550px) {
+  .container-top-page {
+      padding-left: 100px;
+    }
+}

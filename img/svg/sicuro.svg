@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 43.8 45.2" style="enable-background:new 0 0 43.8 45.2;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);fill:#FFFFFF;}
+	.st1{clip-path:url(#SVGID_2_);fill:none;stroke:#1D1D1B;stroke-width:1.418;stroke-linecap:round;}
+	.st2{clip-path:url(#SVGID_2_);fill:#E30613;}
+	.st3{clip-path:url(#SVGID_2_);fill:none;stroke:#1D1D1B;stroke-width:2.269;stroke-linecap:square;stroke-linejoin:round;}
+</style>
+<g>
+	<defs>
+		<rect id="SVGID_1_" x="8.6" y="0.9" width="26.6" height="43.5"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<path class="st0" d="M10.9,43.6c-0.9,0-1.6-0.7-1.6-1.5V21.5c0-0.8,0.7-1.5,1.6-1.5h22c0.9,0,1.6,0.7,1.6,1.5v20.7
+		c0,0.8-0.7,1.5-1.6,1.5H10.9z"/>
+	<path class="st1" d="M10.9,43.6c-0.9,0-1.6-0.7-1.6-1.5V21.5c0-0.8,0.7-1.5,1.6-1.5h22c0.9,0,1.6,0.7,1.6,1.5v20.7
+		c0,0.8-0.7,1.5-1.6,1.5H10.9z"/>
+	<path class="st2" d="M26,37.9L24.4,32c0.9-0.7,1.4-1.7,1.4-2.8c0-2-1.8-3.7-3.9-3.7S18,27.1,18,29.2c0,1.1,0.6,2.2,1.4,2.8
+		l-1.6,5.9c-0.1,0.3,0.1,0.5,0.4,0.5h7.3C25.9,38.5,26.1,38.2,26,37.9"/>
+	<path class="st3" d="M12.3,18.6v-7.8h0C12.3,6,16.6,2,21.9,2s9.6,4,9.6,8.9h0v7.8"/>
+</g>
+</svg>

@@ -1,0 +1,135 @@
+
+
+/* containers classes  */
+
+.container-top-software-page{
+  background-image: url(mockups/assets/images/Software-page/bg_software.jpg);
+  background-size:cover;
+   height:fit-content;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 120px;
+   padding-bottom: 50px;
+}
+
+@media (min-width: 550px) {
+  .container-top-software-page{
+      padding-left: 100px;
+    }
+}
+
+
+/* containers*/
+
+.container-vertical-padding{
+  height: fit-content;
+   padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+
+/* app cards*/
+
+.card{
+  min-width: 235px;
+  width: 600px;
+  height: 200px;
+}
+
+
+/* Typograph style */
+
+.container-title{
+  padding-bottom: 0;
+  text-align: center;
+  color:#c50e29;
+}
+
+.back-card-title{
+  width: 100%;
+  color: #c50e29;
+  position: absolute;
+  margin-left: 10px;
+  margin-top:10px;
+}
+
+
+.back-card-paragraph{
+  text-align: left;
+  color: black; 
+  position: absolute;
+  top:40px;
+  left:10px;
+  width: 98%;
+  font-size: small;
+}
+
+.front-card-title{
+  width: 100%;
+  color:white;
+  padding-top: 15px;
+}
+
+.download-app-btn{
+  margin:0px 0px;
+  padding:0px 0px;
+  border: none;
+}
+
+
+.bar-paragraph{
+  text-align: center;
+  color:black;
+  padding-top: 20px;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+
+.app-store-img{
+
+  width: 120px;
+  height: 40px;
+}
+
+.colored-bar{
+  padding-bottom:30px;
+  background-color:#ff5353;
+  height: fit-content;
+  margin-bottom: 50px;
+}
+
+.container-vertical-padding{
+  height: fit-content;
+   padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+
+.button-black-to-white{
+  background-color: black;
+  border-color: black;
+  color: white;
+  max-width: 280px;
+}
+.button-black-to-white:hover{
+  background-color:white;
+  border-color: black;
+  color: black;
+}
+
+.button-red-card{
+  position:absolute;
+  bottom:5px;
+  left:5px;
+  color:black;
+  background-color: #c2102a;
+  border-color: #c2102a;
+}
+.button-red-card:hover{
+  color:white;
+  background-color: #ff5353;
+  border-color: #ff5353;
+}

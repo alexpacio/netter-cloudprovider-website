@@ -1,0 +1,7 @@
+.bg-dark .text-center .text{
+  color: white;
+  text-decoration: none;
+}
+.bg-dark .text-center .text:hover{
+  color: #ea4b4f;
+}

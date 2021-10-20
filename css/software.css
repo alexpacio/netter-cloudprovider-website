@@ -1,0 +1,73 @@
+
+.container-top-software-page{
+  background-image: url(file:///home/manse/git/netter/netter-cloudprovider-website/img/bg_software.jpg);
+  background-size:cover;
+   height:fit-content;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 120px;
+   padding-bottom: 50px;
+}
+
+.row{
+  height: fit-content;
+}
+
+@media (min-width: 550px) {
+  .container-top-software-page{
+      padding-left: 100px;
+    }
+}
+
+.container-vertical-padding{
+  height: fit-content;
+   padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.container-title{
+  padding-bottom: 0;
+  text-align: center;
+  color:#c50e29;
+}
+
+.download-app-btn{
+  margin:0px 0px;
+  padding:0px 0px;
+  border: none;
+}
+
+.bar-paragraph{
+  text-align: center;
+  color:black;
+  padding-top: 20px;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+.app-store-img{
+  width: 120px;
+  height: 40px;
+}
+
+.colored-bar{
+  padding-bottom:30px;
+  background-color:#ff5353;
+  height: fit-content;
+  margin-bottom: 50px;
+}
+
+.container-vertical-padding{
+  height: fit-content;
+   padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.card{
+  min-width: 235px;
+}
+
+@media (min-width: 600px) {
+  .card{
+      width: 600px;  }
+}

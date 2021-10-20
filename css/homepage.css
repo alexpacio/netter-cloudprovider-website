@@ -1,0 +1,100 @@
+
+.container-top-homepage{
+  background-image: url(file:///home/manse/git/netter/netter-cloudprovider-website/img/bg_home.jpg);
+  background-size: cover;
+   height:fit-content;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 120px;
+   padding-bottom: 50px;
+}
+
+@media (min-width: 550px) {
+  .container-top-homepage {
+      padding-left: 100px;
+    }
+}
+
+.container-with-icons{
+  background-color: rgba(213, 213, 213, 0.419);
+}
+
+.container-vertical-padding{
+  height: fit-content;
+   padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.colored-bar{
+  padding-bottom:30px;
+  background-color:#ff5353;
+  height: fit-content;
+}
+
+
+.icon-column-style{
+  text-align: center;
+  margin-top: 10px; 
+  align-items: center;
+}
+
+.icon-img{
+  margin-bottom: 30px;
+}
+
+@media (min-width: 1200px) {
+  .app-row {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+
+.container-title{
+  padding-bottom: 0;
+  text-align: center;
+  color:#c50e29;
+}
+
+.icons-paragraph{
+  padding-top: 30px;
+}
+
+.bar-header{
+  padding-top:30px;
+  text-align: center;
+  color: black;
+}
+
+.bar-paragraph{
+  text-align: center;
+  color: white;
+}
+
+.button-orange-to-red, button.btn.btn-primary.button-white-to-black{
+  max-width: 280px;
+}
+
+
+.card{
+  width: 240px;
+}
+
+.customer-card{
+  background-color: #eeee;
+  height: fit-content;
+}
+
+.customer-card:hover{
+box-shadow: 4px 4px 4px 4px #888888;
+}
+
+.customer-title{
+  color: black;
+}
+.customer-paragraph{
+  color:black;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
