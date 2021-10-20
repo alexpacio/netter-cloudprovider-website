@@ -1,0 +1,8 @@
+.language-link-container{
+padding-top: 10px;
+padding-right: 10px;
+}
+
+  .language-link-container > a{
+      border-radius: 4px;
+  }

@@ -123,3 +123,5 @@ for(i=0;i<items.length;i++){
         items[i].parentElement.className+=' active';
     }
 }
+
+document.getElementById('navbar-container').style.height=navbar.offsetHeight.toString()+'px';
