@@ -1,6 +1,6 @@
 
 .container-top-software-page{
-  background-image: url(file:///home/manse/git/netter/netter-cloudprovider-website/img/bg_software.jpg);
+  background-image: url(./../img/bg_software.jpg);
   background-size:cover;
    height:fit-content;
    padding-left: 10px;

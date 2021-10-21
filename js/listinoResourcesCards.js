@@ -109,7 +109,7 @@ function resourceCardCreator(cardTitle,cardDescription){
    var showDatacenter2=document.createElement('button');
    showDatacenter2.className += "card-flipper-button-front";
    var imgShowDatacenter = document.createElement('img');
-   imgShowDatacenter.src = "file:///home/manse/git/netter/netter-cloudprovider-website/img/svg/add_circle_white_24dp.svg"
+   imgShowDatacenter.src = "./../img/svg/add_circle_white_24dp.svg"
    showDatacenter2.appendChild(imgShowDatacenter);
    lastButtonPosition.appendChild(showDatacenter2);
 
@@ -144,7 +144,7 @@ function resourceCardCreator(cardTitle,cardDescription){
   var hideDatacenter2=document.createElement('button');
   hideDatacenter2.className += "card-flipper-button-front";
   var imgHideDatacenter = document.createElement('img');
-  imgHideDatacenter.src = "file:///home/manse/git/netter/netter-cloudprovider-website/img/svg/remove_circle_black_24dp.svg"
+  imgHideDatacenter.src = "./../img/svg/remove_circle_black_24dp.svg"
   hideDatacenter2.appendChild(imgHideDatacenter);
   positionHideButton.appendChild(hideDatacenter2);
 

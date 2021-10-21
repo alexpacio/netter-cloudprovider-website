@@ -8,7 +8,7 @@
   margin-right: 10px;
 }
 .container-top-page{
-  background-image: url(file:///home/manse/git/netter/netter-cloudprovider-website/img/bg_applicazioni.jpg);
+  background-image: url(./../img/bg_applicazioni.jpg);
   background-size:100% 100%;
    height:fit-content;
    padding-left: 10px;
@@ -69,7 +69,6 @@
 .card{
   min-width: 235px;
   width: 235px;
-  height: 250px;
 }
 
 /*pagination style*/
