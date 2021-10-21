@@ -69,10 +69,28 @@ a.navbar-brand{
   border-color: #ff5353;
 }
 
+
+
 #navbar-button:hover{
   color:white;
   background-color: #c2102a;
   border-color: #c2102a;
+}
+
+.language-button{
+  background-color:  #ff5353;
+  margin-right: 20px;
+  height: 30px;
+  width: 30px;
+  padding: 4px 4px;
+  font-size: small;
+  color:black;
+  border-radius: 50%;
+}
+
+.language-button:hover{
+  color:white;
+  background-color: #c2102a;
 }
 /*navbar items space beetween + underscore line - end */
 

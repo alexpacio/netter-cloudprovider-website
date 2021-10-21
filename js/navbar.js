@@ -114,6 +114,16 @@ navbarButton.className+='btn btn-sm btn-outline-success';
 navbarButton.type="submit";
 navbarButton.id="navbar-button";
 navbarButton.innerHTML='Inizia ora';
+
+var languageButton=document.createElement('button');
+languageButton.className+='btn btn-sm language-button';
+languageButton.innerHTML='EN';
+languageButton.type='button';
+languageButton.onclick=function(){
+    changeLanguage(languageButton.textContent);
+    languageButton.innerHTML==='EN'?languageButton.innerHTML='IT':languageButton.innerHTML='EN';
+}
+dFlex.appendChild(languageButton);
 dFlex.appendChild(navbarButton);
 
 var items=document.getElementsByClassName('nav-link');

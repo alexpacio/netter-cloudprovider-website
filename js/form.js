@@ -232,8 +232,8 @@ function printCompany(nomeAzienda,settoreDiBusines,partitaIVA,telefono,stato,reg
     }
 
 
-function setLanguage(language){
-      if(language==="it"){
+function changeLanguage(language){
+      if(language==="IT"){
           document.getElementById('it').className='list-group-item active';
           document.getElementById('en').className='list-group-item';
           document.getElementById('page-title').textContent='Registrati alla piattaforma Netter';
@@ -242,8 +242,8 @@ function setLanguage(language){
           document.getElementById('Settore-di-Business-label').textContent='Settore di Business';
           document.getElementById('Partita-IVA-label').textContent='Partita IVA';
           document.getElementById('Telefono-label').textContent='Telefono';
-          document.getElementById('Stato-label').textContent='Country';
-          document.getElementById('Regione-label').textContent='Stato';
+          document.getElementById('Stato-label').textContent='Stato';
+          document.getElementById('Regione-label').textContent='Regione';
           document.getElementById('Citta-label').textContent='Citta';
           document.getElementById('Comune-label').textContent='Comune';
           document.getElementById('Indirizzo-label').textContent='Indirizzo';

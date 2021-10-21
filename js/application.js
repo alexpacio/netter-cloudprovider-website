@@ -1,11 +1,28 @@
 
+   var items=$('.application-cards-columns');
+   var numItems=items.length;
+   var perPage= 8;
+   items.slice(perPage).hide();
+
+   $('#pagination-container').pagination({
+     items:numItems,
+     itemsOnPage:perPage,
+     prevText:"<",
+     nextText:">",
+     onPageClick:function(pageNumber){
+       var showFrom=perPage*(pageNumber-1);
+       var showTo=showFrom+perPage;
+       items.hide().slice(showFrom,showTo).show();
+     }
+   })
+   
+
 const input = document.querySelector('input');
+input.addEventListener('input', cardSearch);
 
-input.addEventListener('input', updateValue);
+function cardSearch(e) {
 
-function updateValue(e) {
-
-  var input, cards, cardContainer, title, i;
+  var input, cards, title, i;
   input=e.target.value.toLowerCase();
   cards = document.getElementsByClassName("card");
   //if that prints back the cards once you delete the deleted cards
@@ -29,8 +46,10 @@ function updateValue(e) {
     }
   } else{
   for (i = 0; i < cards.length; i++) {
-    title = cards[i].id.toString().toLowerCase();
-   //console.log("titolo id:"+title+ "|| ricerca: "+input);
+    title = cards[i].querySelector('.front-card-title.text-center.IT').style.display==='none'?
+            cards[i].querySelector('.front-card-title.text-center.EN').textContent.toLowerCase():
+            cards[i].querySelector('.front-card-title.text-center.IT').textContent.toLowerCase();
+  // console.log("titolo id:"+title+ "|| ricerca: "+input);
     if (title.includes(input)) {
       cards[i].parentElement.parentElement.style.display = "";
     } else {
@@ -39,3 +58,10 @@ function updateValue(e) {
   }
 }
 }
+
+
+function changeLanguage(language){
+    console.log(language);
+    cardChangeLanguage(language);
+   
+  }
