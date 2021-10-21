@@ -49,7 +49,6 @@ p.text-center{
 
 .card{
   width: 200px;
-  height: 200px;
 }
 
 .icon-img{
@@ -96,6 +95,7 @@ p.text-center{
   color: white;
   margin: 5px;
   padding-bottom: 30px;
+  font-size: small;
   
 }
 

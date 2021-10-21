@@ -1,46 +1,54 @@
-if(!window.location.href.includes('index.html')){
-const isHomepage=window.location.href.includes('index.html');
-};
 var loremIpsumText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." +
   " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
   const descriptionEN="This is a plceholder for a text area. It's not supposed to say anything, is just here to take some space as an example for a future real text "+
-                      "that might be longer or shorter, like the lorem ipsum text but in english to see a different language.";
-createFlipCard("Server di Posta","Mail Server", loremIpsumText,descriptionEN+'dfgsgsdvksjdvbjashdblkabvklsdbvklsudfbvklsdvbkjsdbvklsdjfbvksdfvbsakjdvbaskjvbslakdjvbask.jdvbsaklbvsakdjvb');
-createFlipCard("Database SQL","Database SQL" ,loremIpsumText,descriptionEN);
-createFlipCard("Centralino Voip","Voip Caller", loremIpsumText,descriptionEN);
-createFlipCard("Lorem Ipsum 1","English Title 1", loremIpsumText,descriptionEN);
-createFlipCard("Lorem Ipsum 2","English Title 2", loremIpsumText,descriptionEN);
-createFlipCard("Lorem Ipsum 3","English Title 3", loremIpsumText,descriptionEN);
-createFlipCard("Lorem Ipsum 4","English Title 4", loremIpsumText,descriptionEN);
-createFlipCard("Lorem Ipsum 5", "English Title 5",loremIpsumText,descriptionEN);
-createFlipCard("Lorem Ipsum 6","English Title 6", loremIpsumText,descriptionEN);
-createFlipCard("Lorem Ipsum 7","English Title 7" ,loremIpsumText,descriptionEN);
-createFlipCard("Lorem Ipsum 8","English Title 8" ,loremIpsumText,descriptionEN);
-createFlipCard("Lorem Ipsum 9", "English Title 9",loremIpsumText,descriptionEN);
+  "that might be longer or shorter, like the lorem ipsum text but in english to see a different language.";
+
+createFlipCard("Cloud Client", loremIpsumText,descriptionEN);
+createFlipCard("Active Directory Agent", loremIpsumText,descriptionEN);
+createFlipCard("RDP Client", loremIpsumText,descriptionEN);
+createFlipCard("Migration Tool", loremIpsumText,descriptionEN);
+createFlipCard("Mobile App", loremIpsumText,descriptionEN);
+createFlipCard("Netter OS for Devices", loremIpsumText,descriptionEN);
+createFlipCard("Lifecycle Agent", loremIpsumText,descriptionEN);
+createFlipCard("Spice Agent", loremIpsumText,descriptionEN);
+createFlipCard("Indirect Display Windows Driver", loremIpsumText,descriptionEN);
+
+
+const itemsCards=document.getElementsByClassName('card');
+
+//function that resizes cards when web-page gets resized (examole on phone rotation)
+window.addEventListener('resize', function(event) {
+  for(i=0;i<itemsCards.length;i++){
+    const card=itemsCards[i];
+    const frontHeight=card.querySelector('.front-face').offsetHeight;
+    const backHeight=card.querySelector('.back-face').offsetHeight;
+      card.style.height=backHeight.toString()+'px';
+      card.querySelector('.front-face').style.height='100%';
+  }
+this.document.querySelector('#flip-card-container').style.height='fit-content';
+}, true);
 
 
 
-
-function createFlipCard(titleIT,titleEN ,backFaceParagraphIT,backFaceParagraphEN) {
+function createFlipCard(titleIT,backFaceParagraphIT,backFaceParagraphEN) {
+ const titleEN =titleIT;
+  var newRow = document.createElement('div');
+  newRow.className += 'row';
+  document.getElementById('flip-card-container').appendChild(newRow);
   var newCol = document.createElement('div');
-  newCol.className += 'col application-cards-columns';
-  newCol.id=titleIT.toString();
-  document.getElementById('flip-card-container').appendChild(newCol);
-  var newDFlex =document.createElement('div');
-  newDFlex.className+='d-flex justify-content-center';
-  newCol.appendChild(newDFlex);
+  newCol.className += 'col d-flex justify-content-center';
+  newRow.appendChild(newCol);
   //card
   var newCard = document.createElement('div');
   newCard.className += 'card';
   newCard.id = titleIT.toString();
-  newDFlex.appendChild(newCard);
+  newCol.appendChild(newCard);
   //front
   var newFrontFace = document.createElement('div');
   newFrontFace.className += 'front-face';
   var newFrontTitle = document.createElement('h3');
   newFrontTitle.className += 'front-card-title text-center IT';
   newFrontTitle.innerHTML = titleIT.toString();
-  newFrontFace.appendChild(newFrontTitle);
   //english version
   var newFrontTitleEN = document.createElement('h3');
   newFrontTitleEN.className += 'front-card-title text-center EN';
@@ -48,27 +56,29 @@ function createFlipCard(titleIT,titleEN ,backFaceParagraphIT,backFaceParagraphEN
   newFrontTitleEN.style.display='none';
   newFrontFace.appendChild(newFrontTitleEN);
    //en
-
-  var buttonsFrontGrid=document.createElement('div');
-  buttonsFrontGrid.className+='d-flex justify-content-between';
+  newFrontFace.appendChild(newFrontTitle);
+  var buttonsFrontGrid = document.createElement('div');
+  buttonsFrontGrid.className += 'd-flex justify-content-between';
   newFrontFace.appendChild(buttonsFrontGrid);
 
   var installFrontButton = document.createElement('button');
   installFrontButton.className += 'btn btn-sm button-red-card';
-  installFrontButton.innerHTML = 'Installa';
+  installFrontButton.innerHTML = 'Download';
   buttonsFrontGrid.appendChild(installFrontButton);
   var buttonFrontFlip = document.createElement('button');
   buttonFrontFlip.className += "card-flipper-button-front";
   buttonFrontFlip.onclick = function () {
     const targetCard = lookForCardElement(this);
     targetCard.style.transform = "rotateY(180deg)";
+    newBackFace.style.display = '';
+    setTimeout(function () { newFrontFace.style.display = 'none'; }, 800);
   }
   var imgFrontFlip = document.createElement('img');
-  imgFrontFlip.src =isHomepage?'./img/svg/add_circle_white_24dp.svg':'./../img/svg/add_circle_white_24dp.svg';
+  imgFrontFlip.src = "./../img/svg/add_circle_white_24dp.svg"
   buttonFrontFlip.appendChild(imgFrontFlip);
   buttonsFrontGrid.appendChild(buttonFrontFlip);
   newCard.appendChild(newFrontFace);
-  const frontHeight=newFrontFace.offsetHeight;
+  const frontHeight = newFrontFace.offsetHeight;
   //back
   var newBackFace = document.createElement('div');
   newBackFace.className += 'back-face';
@@ -95,42 +105,41 @@ function createFlipCard(titleIT,titleEN ,backFaceParagraphIT,backFaceParagraphEN
   newBackParagraphEN.style.display='none';
   newBackFace.appendChild(newBackParagraphEN);
   //en
-  var ButtonDflex=document.createElement('div');
-  ButtonDflex.className+='d-flex justify-content-around';
-  newBackFace.appendChild(ButtonDflex);
-  var button1=document.createElement('button');
-  button1.className+='btn btn-sm button-red-card';
-  button1.innerHTML='Installa';
-  ButtonDflex.appendChild(button1);
-  var button2=document.createElement('button');
-  button2.className+='btn btn-sm button-white-to-black';
-  button2.innerHTML='Cost Calculator';
-  ButtonDflex.appendChild(button2);
+  var buttonsBackGrid = document.createElement('div');
+  buttonsBackGrid.className += 'd-flex justify-content-between';
+  newBackFace.appendChild(buttonsBackGrid);
+  var installBackButton = document.createElement('button');
+  installBackButton.className += 'btn btn-sm button-red-card';
+  installBackButton.innerHTML = 'Download';
+  buttonsBackGrid.appendChild(installBackButton);
 
   var buttonBackFlip = document.createElement('button');
   buttonBackFlip.className += "card-flipper-button-back";
   buttonBackFlip.onclick = function () {
     const targetCard = lookForCardElement(this);
     targetCard.style.transform = "rotateY(0deg)";
+    newFrontFace.style.display = '';
+    setTimeout(function () { newBackFace.style.display = 'none'; }, 800);
   }
-
   var imgBackFlip = document.createElement('img');
-  imgBackFlip.src =isHomepage?'./img/svg/remove_circle_black_24dp.svg':'./../img/svg/remove_circle_black_24dp.svg';
+  imgBackFlip.src = "./../img/svg/remove_circle_black_24dp.svg"
   buttonBackFlip.appendChild(imgBackFlip);
-  ButtonDflex.appendChild(buttonBackFlip);
-
-
-
-  const backHeight=newBackFace.offsetHeight;
-  if(backHeight>frontHeight){
-    newCard.style.height=backHeight.toString()+'px';
-    newFrontFace.style.height=backHeight.toString()+'px';
-  } else{
-    newCard.style.height=frontHeight.toString()+'px';
-    newFrontFace.style.height=frontHeight.toString()+'px';
+  buttonsBackGrid.appendChild(buttonBackFlip);
+  const backHeight = newBackFace.offsetHeight;
+  if (backHeight > frontHeight) {
+    newCard.style.height = backHeight.toString() + 'px';
+    newFrontFace.style.height = backHeight.toString() + 'px';
+  } else {
+    newCard.style.height = frontHeight.toString() + 'px';
+    newFrontFace.style.height = frontHeight.toString() + 'px';
   }
+  var width=newCard.offsetWidth;
+
 }
 
+function resizeCard(){
+  console.log("resized card!! funzione sotto");
+}
 
 
 function lookForCardElement(element) {
@@ -139,6 +148,29 @@ function lookForCardElement(element) {
   }
   return lookForCardElement(element.parentElement);
 }
+
+function changeLanguage(language){
+  cardChangeLanguage(language);
+  stickerElementChangeLanguage(language);
+  const containerTopPage=document.querySelector('.container-top-software-page');
+  const softwareCardContainer=document.getElementById('flip-card-container');
+  const coloredBar=document.querySelector('.colored-bar');
+  if(language==='EN'){
+   containerTopPage.querySelector('p').innerHTML='Transform any client</br> in a device';
+   containerTopPage.querySelector('button').innerHTML='Create a tenant with 300€ of credit';
+   softwareCardContainer.querySelector('h1').innerHTML='Downloadable</br>Software';
+   coloredBar.querySelector('p').innerHTML="Download Netter app to have mobile access to the platform.";
+  }else{
+    containerTopPage.querySelector('p').innerHTML='Trasforma un client qualsiasi</br> in un device';
+    containerTopPage.querySelector('button').innerHTML='Crea un tenant con 300€ di credito';
+    softwareCardContainer.querySelector('h1').innerHTML=' Software </br>scaricabili';
+    coloredBar.querySelector('p').innerHTML="Scarica l'app Netter per accedere alla piattaforma cloud anche da mobile.";
+
+  }
+
+}
+
+
 
 function cardChangeLanguage(language){
   const cardItems=document.getElementById('flip-card-container').getElementsByClassName('card');
@@ -165,20 +197,6 @@ function cardChangeLanguage(language){
 
 
     }
-    const card=cardItems[i];
-    card.querySelector('.front-face').style.height='fit-content';
-    card.querySelector('.back-face').style.height='fit-content';
-    const frontHeight=card.querySelector('.front-face').offsetHeight;
-    const backHeight=card.querySelector('.back-face').offsetHeight;
-    if(frontHeight<backHeight){
-      card.style.height=backHeight.toString()+'px';
-      card.querySelector('.front-face').style.height=backHeight.toString()+'px';
-    }else{
-      card.style.height=frontHeight.toString()+'px';
-      card.querySelector('.back-face').style.height=frontHeight.toString()+'px';
-
   }
-  }
-  document.getElementById('flip-card-container').style.height='fit-content';
 
 }

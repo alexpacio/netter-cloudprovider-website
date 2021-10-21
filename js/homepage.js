@@ -11,6 +11,19 @@ for(i=0;i<cardsContainerItems.length;i++){
 function showAllApplication(event){
   for(i=0;i<cardsContainerItems.length;i++){
     cardsContainerItems[i].style.display='';
+    const card=cardsContainerItems[i].querySelector('.card');
+    card.querySelector('.front-face').style.height='fit-content';
+    card.querySelector('.back-face').style.height='fit-content';
+    const frontHeight=card.querySelector('.front-face').offsetHeight;
+    const backHeight=card.querySelector('.back-face').offsetHeight;
+    if(frontHeight<backHeight){
+      card.style.height=backHeight.toString()+'px';
+      card.querySelector('.front-face').style.height=backHeight.toString()+'px';
+    }else{
+      card.style.height=frontHeight.toString()+'px';
+      card.querySelector('.back-face').style.height=frontHeight.toString()+'px';
+
+  }
 }
 var buttonMostraTutte=event.currentTarget;
 buttonMostraTutte.style.display="none";
@@ -36,6 +49,7 @@ document.getElementById('flip-card-container').appendChild(dFlex);
 function changeLanguage(language){
   console.log(language);
   cardChangeLanguage(language);
+  stickerElementChangeLanguage(language);
   const containerTopPage=document.querySelector('.container-fluid.container-top-homepage');
   const containerWithIcons=document.querySelector('.container-with-icons');
   const applicationContainer=document.getElementById('flip-card-container').parentElement;

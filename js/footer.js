@@ -8,7 +8,9 @@ var footer=document.createElement('footer');
  textCenter.className+='text-center p-3';
  textCenter.style.color='white';
  footer.appendChild(textCenter);
- textCenter.innerHTML='  © 2021 Netter. Tutti i diritti riservati  ';
+ var newP=document.createElement('p');
+ newP.innerHTML='  © 2021 Netter. Tutti i diritti riservati  ';
+ textCenter.appendChild(newP);//innerHTML='  © 2021 Netter. Tutti i diritti riservati  ';
  //footer item 1 - Privacy policy
  var footerItem1=document.createElement('a');
  footerItem1.className+='text';
