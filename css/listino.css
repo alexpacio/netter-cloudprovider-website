@@ -56,7 +56,7 @@ div.d-flex.justify-content-around{
 
 
 .container-top-page{
-  background-image: url(file:///home/manse/git/netter/netter-cloudprovider-website/img/bg_listino.png);
+  background-image: url(./../img/bg_listino.png);
   background-size:100% 100%;
    height:fit-content;
    padding-left: 10px;

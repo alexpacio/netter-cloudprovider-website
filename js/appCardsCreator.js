@@ -1,3 +1,5 @@
+if(!window.location.href.includes('index.html')){
+const isHomepage=window.location.href.includes('index.html');}
 var loremIpsumText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." +
   " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
   const descriptionEN="This is a plceholder for a text area. It's not supposed to say anything, is just here to take some space as an example for a future real text "+
@@ -63,7 +65,7 @@ function createFlipCard(titleIT,titleEN ,backFaceParagraphIT,backFaceParagraphEN
     setTimeout(function(){newFrontFace.style.display='none';}, 800);
   }
   var imgFrontFlip = document.createElement('img');
-  imgFrontFlip.src = "file:///home/manse/git/netter/netter-cloudprovider-website/img/svg/add_circle_white_24dp.svg"
+  imgFrontFlip.src =isHomepage?'./img/svg/add_circle_white_24dp.svg':'./../img/svg/add_circle_white_24dp.svg';
   buttonFrontFlip.appendChild(imgFrontFlip);
   buttonsFrontGrid.appendChild(buttonFrontFlip);
   newCard.appendChild(newFrontFace);
@@ -116,7 +118,7 @@ function createFlipCard(titleIT,titleEN ,backFaceParagraphIT,backFaceParagraphEN
   }
 
   var imgBackFlip = document.createElement('img');
-  imgBackFlip.src = "file:///home/manse/git/netter/netter-cloudprovider-website/img/svg/remove_circle_black_24dp.svg"
+  imgBackFlip.src =isHomepage?'./img/svg/remove_circle_black_24dp.svg':'./../img/svg/remove_circle_black_24dp.svg';
   buttonBackFlip.appendChild(imgBackFlip);
   ButtonDflex.appendChild(buttonBackFlip);
 

@@ -63,7 +63,7 @@ function createFlipCard(title, backFaceParagraph) {
     setTimeout(function () { newFrontFace.style.display = 'none'; }, 800);
   }
   var imgFrontFlip = document.createElement('img');
-  imgFrontFlip.src = "file:///home/manse/git/netter/netter-cloudprovider-website/img/svg/add_circle_white_24dp.svg"
+  imgFrontFlip.src = "./../img/svg/add_circle_white_24dp.svg"
   buttonFrontFlip.appendChild(imgFrontFlip);
   buttonsFrontGrid.appendChild(buttonFrontFlip);
   newCard.appendChild(newFrontFace);
@@ -97,7 +97,7 @@ function createFlipCard(title, backFaceParagraph) {
     setTimeout(function () { newBackFace.style.display = 'none'; }, 800);
   }
   var imgBackFlip = document.createElement('img');
-  imgBackFlip.src = "file:///home/manse/git/netter/netter-cloudprovider-website/img/svg/remove_circle_black_24dp.svg"
+  imgBackFlip.src = "./../img/svg/remove_circle_black_24dp.svg"
   buttonBackFlip.appendChild(imgBackFlip);
   buttonsBackGrid.appendChild(buttonBackFlip);
   const backHeight = newBackFace.offsetHeight;

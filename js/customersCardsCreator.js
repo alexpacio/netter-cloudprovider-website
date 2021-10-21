@@ -1,7 +1,7 @@
-const imgUrl1="file:///home/manse/git/netter/netter-cloudprovider-website/img/svg/client1.svg";
-const imgUrl2="file:///home/manse/git/netter/netter-cloudprovider-website/img/svg/client2.svg";
-const imgUrl3="file:///home/manse/git/netter/netter-cloudprovider-website/img/svg/client3.svg";
-const imgUrl4="file:///home/manse/git/netter/netter-cloudprovider-website/img/svg/client4.svg";
+const imgUrl1="./img/svg/client1.svg";
+const imgUrl2="./img/svg/client2.svg";
+const imgUrl3="./img/svg/client3.svg";
+const imgUrl4="./img/svg/client4.svg";
 
 const customerUrl1="http://google.com";
 const customerUrl2="http://google.com";

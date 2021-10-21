@@ -7,6 +7,7 @@ for(i=0;i<cardsContainerItems.length;i++){
   }
 }
 
+
 function showAllApplication(event){
   for(i=0;i<cardsContainerItems.length;i++){
     cardsContainerItems[i].style.display='';

@@ -64,17 +64,17 @@ function createTemplateCard(title,description){
     showTemplateButton.className+='btn show-template-button';
     showTemplateButton.innerHTML='Visualizza template';
     var showTemplate=document.createElement('img');
-    showTemplate.src='file:///home/manse/git/netter/netter-cloudprovider-website/img/svg/keyboard_arrow_down_white_24dp.svg';
+    showTemplate.src='./../img/svg/keyboard_arrow_down_white_24dp.svg';
     showTemplateButton.onclick=function(){
         if(newTemplateFrame.style.display==='none'){
             newTemplateFrame.style.display='';
             showTemplateButton.innerHTML='Nascondi template';
-            showTemplate.src="file:///home/manse/git/netter/netter-cloudprovider-website/img/svg/keyboard_arrow_up_white_24dp.svg";
+            showTemplate.src="./../img/svg/keyboard_arrow_up_white_24dp.svg";
             showTemplateButton.appendChild(showTemplate);
         } else{
             newTemplateFrame.style.display='none';
             showTemplateButton.innerHTML='Visualizza template';
-            showTemplate.src="file:///home/manse/git/netter/netter-cloudprovider-website/img/svg/keyboard_arrow_down_white_24dp.svg";
+            showTemplate.src="./../img/svg/keyboard_arrow_down_white_24dp.svg";
             showTemplateButton.appendChild(showTemplate);
         }
     }

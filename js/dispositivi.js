@@ -1,11 +1,11 @@
 var loremIpsumText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d";
 
-const imgUrl1='file:///home/manse/git/netter/netter-cloudprovider-website/img/svg/autoconfigurante.svg';
-const imgUrl2='file:///home/manse/git/netter/netter-cloudprovider-website/img/svg/semplicita.svg';
-const imgUrl3='file:///home/manse/git/netter/netter-cloudprovider-website/img/svg/sicuro.svg';
-const imgUrl4='file:///home/manse/git/netter/netter-cloudprovider-website/img/svg/veloce.svg';
-const imgUrl5='file:///home/manse/git/netter/netter-cloudprovider-website/img/svg/autoconfigurante.svg';
-const imgUrl6='file:///home/manse/git/netter/netter-cloudprovider-website/img/svg/autoconfigurante.svg';
+const imgUrl1='./../img/svg/autoconfigurante.svg';
+const imgUrl2='./../img/svg/semplicita.svg';
+const imgUrl3='./../img/svg/sicuro.svg';
+const imgUrl4='./../img/svg/veloce.svg';
+const imgUrl5='./../img/svg/autoconfigurante.svg';
+const imgUrl6='./../img/svg/autoconfigurante.svg';
 
 
 createFlipCard("flip-card-container","Autoconfigurante",imgUrl1, loremIpsumText);
@@ -50,7 +50,7 @@ buttonFrontFlip.onclick=function () {
   targetCard.style.transform = "rotateY(180deg)";
 }
 var imgFrontFlip=document.createElement('img');
-imgFrontFlip.src="file:///home/manse/git/netter/netter-cloudprovider-website/img/svg/add_circle_black_24dp.svg"
+imgFrontFlip.src="./../img/svg/add_circle_black_24dp.svg"
 buttonFrontFlip.appendChild(imgFrontFlip);
 buttonFrontFlip.style.position='absolute';
 buttonFrontFlip.style.bottom='5px';
@@ -83,7 +83,7 @@ buttonBackFlip.onclick=function () {
   targetCard.style.transform = "rotateY(0deg)";
 }
 var imgBackFlip=document.createElement('img');
-imgBackFlip.src="file:///home/manse/git/netter/netter-cloudprovider-website/img/svg/remove_circle_white_24dp.svg"
+imgBackFlip.src="./../img/svg/remove_circle_white_24dp.svg"
 buttonBackFlip.appendChild(imgBackFlip);
 newBackFace.appendChild(backButtonContainer);
 backButtonContainer.appendChild(buttonBackFlip);

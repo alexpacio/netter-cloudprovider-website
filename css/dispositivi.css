@@ -1,5 +1,5 @@
 .container-top-page{
-  background-image: url(file:///home/manse/git/netter/netter-cloudprovider-website/img/bg_home.jpg);
+  background-image: url(./../img/bg_home.jpg);
   background-size: cover;
    height:fit-content;
    padding-left: 10px;
