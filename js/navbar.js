@@ -1,4 +1,4 @@
-const isHomepage=window.location.href.includes('index.html');
+const isHomepage=window.location.href==='https://alexpacio.github.io/netter-cloudprovider-website/';
 
 var navbar=document.createElement('nav');
 navbar.className+='navbar navbar-expand-custom navbar-dark fixed-top bg-dark';

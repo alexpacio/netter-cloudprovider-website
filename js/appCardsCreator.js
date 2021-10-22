@@ -1,6 +1,5 @@
-if(!window.location.href.includes('index.html')){
-const isHomepage=window.location.href.includes('index.html');
-};
+if(!window.location.href==='https://alexpacio.github.io/netter-cloudprovider-website/'){
+    const isHomepage=window.location.href==='https://alexpacio.github.io/netter-cloudprovider-website/';};
 var loremIpsumText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." +
   " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
   const descriptionEN="This is a plceholder for a text area. It's not supposed to say anything, is just here to take some space as an example for a future real text "+

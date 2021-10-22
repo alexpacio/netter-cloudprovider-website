@@ -1,5 +1,5 @@
-if(!window.location.href.includes('index.html')){
-    const isHomepage=window.location.href.includes('index.html');}
+if(!window.location.href==='https://alexpacio.github.io/netter-cloudprovider-website/'){
+    const isHomepage=window.location.href==='https://alexpacio.github.io/netter-cloudprovider-website/';}
 
 var footer=document.createElement('footer');
  footer.className+='bg-dark text-center text-lg-start';
