@@ -8,7 +8,7 @@ navbarContainer.className+='container-fluid';
 navbar.appendChild(navbarContainer);
 var navbarBrand=document.createElement('a');
 navbarBrand.className+='navbar-brand';
-navbarBrand.href=isHomepage?'./index.html':'./../';
+navbarBrand.href=isHomepage?'./':'./../';
 navbarContainer.appendChild(navbarBrand);
 var brandImg=document.createElement('img');
 brandImg.src=isHomepage?'./img/svg/logonetterULTIMO.svg':'./../img/svg/logonetterULTIMO.svg';
