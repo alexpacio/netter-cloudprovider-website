@@ -89,7 +89,8 @@
     </div>
     <div class="row app-row">
       <div class="d-flex justify-content-center">
-        <button type="button"style="margin:15px" class="btn btn-primary button-black-to-white" onclick="showAllApplication(event)">Mostra tutte</button>
+        <button type="button"style="margin:15px" id="show-all" class="btn btn-primary button-black-to-white" onclick="showAllApplication('show-more')">Mostra tutte</button>
+        <button type="button"style="margin:15px;display:none" id="show-less" class="btn btn-primary button-black-to-white" onclick="showAllApplication('show-less')">Mostra meno</button>
       </div>
     </div>
   </div>

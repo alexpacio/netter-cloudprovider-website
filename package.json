@@ -1,0 +1,33 @@
+{
+  "name": "netter-cloudprovider-website",
+  "version": "1.0.0",
+  "description": "Netter website",
+  "main": "index.html",
+  "dependencies": {
+    "@types/react-js-pagination": "^3.0.4",
+    "@types/react-paginate": "^7.1.1",
+    "bootstrap": "^5.1.3",
+    "browserify": "^17.0.0",
+    "jquery": "^3.6.0",
+    "pagination": "^0.4.6",
+    "simple-pagination": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.8",
+    "@types/node": "^16.11.3"
+  },
+  "scripts": {
+    "compile": "tsc -p ./tsconfig.json",
+    "start": "node index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexpacio/netter-cloudprovider-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexpacio/netter-cloudprovider-website/issues"
+  },
+  "homepage": "https://github.com/alexpacio/netter-cloudprovider-website#readme"
+}
