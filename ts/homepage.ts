@@ -1,12 +1,14 @@
 
-
+console.log('homepage')
 const cardsContainerItems:HTMLCollectionOf<HTMLElement>=document.getElementsByClassName('application-cards-columns') as HTMLCollectionOf<HTMLElement>;
 const nItemsToShow:number=4;
+
+function homepageCard(){
 for(let i:number=0;i<cardsContainerItems.length;i++){
   if(i>nItemsToShow-1){
   cardsContainerItems[i].style.display='none';
   }
-}
+}}
 
 
 function showAllApplication(action:string):void{

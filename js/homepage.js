@@ -1,8 +1,11 @@
+console.log('homepage');
 const cardsContainerItems = document.getElementsByClassName('application-cards-columns');
 const nItemsToShow = 4;
-for (let i = 0; i < cardsContainerItems.length; i++) {
-    if (i > nItemsToShow - 1) {
-        cardsContainerItems[i].style.display = 'none';
+function homepageCard() {
+    for (let i = 0; i < cardsContainerItems.length; i++) {
+        if (i > nItemsToShow - 1) {
+            cardsContainerItems[i].style.display = 'none';
+        }
     }
 }
 function showAllApplication(action) {

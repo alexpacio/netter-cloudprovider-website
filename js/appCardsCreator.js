@@ -1,19 +1,23 @@
-var loremIpsumText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." +
-    " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-const descriptionAppEN = "This is a plceholder for a text area. It's not supposed to say anything, is just here to take some space as an example for a future real text " +
-    "that might be longer or shorter, like the lorem ipsum text but in english to see a different language.";
-createAppFlipCard("Server di Posta", "Mail Server", loremIpsumText, descriptionAppEN + 'dfgsgsdvksjdvbjashdblkabvklsdbvklsudfbvklsdvbkjsdbvklsdjfbvksdfvbsakjdvbaskjvbslakdjvbask.jdvbsaklbvsakdjvb');
-createAppFlipCard("Database SQL", "Database SQL", loremIpsumText, descriptionAppEN);
-createAppFlipCard("Centralino Voip", "Voip Caller", loremIpsumText, descriptionAppEN);
-createAppFlipCard("Lorem Ipsum 1", "English Title 1", loremIpsumText, descriptionAppEN);
-createAppFlipCard("Lorem Ipsum 2", "English Title 2", loremIpsumText, descriptionAppEN);
-createAppFlipCard("Lorem Ipsum 3", "English Title 3", loremIpsumText, descriptionAppEN);
-createAppFlipCard("Lorem Ipsum 4", "English Title 4", loremIpsumText, descriptionAppEN);
-createAppFlipCard("Lorem Ipsum 5", "English Title 5", loremIpsumText, descriptionAppEN);
-createAppFlipCard("Lorem Ipsum 6", "English Title 6", loremIpsumText, descriptionAppEN);
-createAppFlipCard("Lorem Ipsum 7", "English Title 7", loremIpsumText, descriptionAppEN);
-createAppFlipCard("Lorem Ipsum 8", "English Title 8", loremIpsumText, descriptionAppEN);
-createAppFlipCard("Lorem Ipsum 9", "English Title 9", loremIpsumText, descriptionAppEN);
+console.log('app');
+fetch("../data_from_backend/applications.json")
+    .then(function (response) {
+    return response.json();
+})
+    .then(function (data) {
+    const applicationsData = data;
+    //  console.log(resources)
+    for (let i = 0; i < applicationsData.length; i++) {
+        createAppFlipCard(applicationsData[i].appNameIta, applicationsData[i].appNameEng, applicationsData[i].descriptionIta, applicationsData[i].descriptionEng);
+    }
+    if (window.localURL.includes('/pages/')) {
+        console.log('app called');
+        applicationsCard();
+    }
+    else {
+        console.log('home called');
+        homepageCard();
+    }
+});
 function createAppFlipCard(titleIT, titleEN, backFaceParagraphIT, backFaceParagraphEN) {
     const isHomepage = !window.location.href.includes('/pages/');
     var newCol = document.createElement('div');
@@ -116,7 +120,7 @@ function createAppFlipCard(titleIT, titleEN, backFaceParagraphIT, backFaceParagr
     }
     else {
         newCard.style.height = frontHeight.toString() + 'px';
-        newFrontFace.style.height = frontHeight.toString() + 'px';
+        newBackFace.style.height = frontHeight.toString() + 'px';
     }
 }
 function appLookForCardElement(element) {

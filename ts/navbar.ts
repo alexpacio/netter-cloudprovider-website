@@ -116,6 +116,9 @@ navbarButton.className+='btn btn-sm btn-outline-success';
 navbarButton.type="submit";
 navbarButton.id="navbar-button";
 navbarButton.innerHTML='Inizia ora';
+navbarButton.onclick=function(){
+    window.open(isHomepage?'./pages/form.html':'./form.html');
+}
 
 var languageButton:HTMLButtonElement=document.createElement('button');
 languageButton.className+='btn btn-sm language-button';

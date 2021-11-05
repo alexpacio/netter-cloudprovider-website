@@ -1,13 +1,12 @@
 
-//import * as $ from "simple-pagination"
+function applicationsCard(){
 
-const items = $('.application-cards-columns');
-
-const numItems: number = items.length;
-const perPage: number = 8;
+  const items = $('.application-cards-columns');
+  
+  const numItems: number = items.length;
+  const perPage: number = 8;
+  
 items.slice(perPage).hide();
-
-
 $('#pagination-container').pagination({
   items: numItems,
   itemsOnPage: perPage,
@@ -35,6 +34,8 @@ $('#pagination-container').pagination({
     }
   }
 })
+console.log('end app pagination')
+}
 
 const input: HTMLInputElement = document.querySelector('#myFilter');
 input.addEventListener('input', cardSearch);

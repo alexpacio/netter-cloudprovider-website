@@ -1,19 +1,20 @@
+interface SoftwareData{
+  softwareNameIta:string;
+  descriptionIta:string;
+  descriptionEng:string;
+}
+fetch("../data_from_backend/softwares.json")
+  .then(function (response) {
+    return response.json()
+  })
+  .then(function (data) {
+   const softwareData = data as SoftwareData[];
+  //  console.log(resources)
+   for(let i=0;i<softwareData.length;i++){
+     createFlipCard(softwareData[i].softwareNameIta,softwareData[i].descriptionIta,softwareData[i].descriptionEng);
+   }
+  })
 
-
-  var loremIpsumText :string= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." +
-  " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-  const softwareDescriptionEN:string="This is a plceholder for a text area. It's not supposed to say anything, is just here to take some space as an example for a future real text "+
-  "that might be longer or shorter, like the lorem ipsum text but in english to see a different language.";
-
-createFlipCard("Cloud Client", loremIpsumText,softwareDescriptionEN);
-createFlipCard("Active Directory Agent", loremIpsumText,softwareDescriptionEN);
-createFlipCard("RDP Client", loremIpsumText,softwareDescriptionEN);
-createFlipCard("Migration Tool", loremIpsumText,softwareDescriptionEN);
-createFlipCard("Mobile App", loremIpsumText,softwareDescriptionEN);
-createFlipCard("Netter OS for Devices", loremIpsumText,softwareDescriptionEN);
-createFlipCard("Lifecycle Agent", loremIpsumText,softwareDescriptionEN);
-createFlipCard("Spice Agent", loremIpsumText,softwareDescriptionEN);
-createFlipCard("Indirect Display Windows Driver", loremIpsumText,softwareDescriptionEN);
 
 
 const itemsCards:HTMLCollectionOf<HTMLElement>=document.getElementsByClassName('card') as HTMLCollectionOf<HTMLElement>;

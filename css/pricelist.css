@@ -19,19 +19,6 @@ input.form-control{
   margin-right: 20px;
 }
 
-.datacenter-1-card , .datacenter-2-card{
-  background-color: #424242;
-  border-radius: 4px;
-  height: fit-content;
-}
-
-.datacenter-1-card{
-  background-color: #424242;
-  width: fit-content;
-}
-.datacenter-2-card{
-  background-color: #eeee;
-}
 
 .datacenter-1-title{
   margin-top:10px;
@@ -48,11 +35,6 @@ div.d-flex.justify-content-around{
   
 }
 
-@media (min-width: 550px) {
-  .datacenter-1-card , .datacenter-2-card{
-    min-width: 500px;
-  }
-}
 
 
 .container-top-page{
@@ -85,21 +67,14 @@ div.d-flex.justify-content-around{
     }
 }
 
+.button-red-to-orange{
+  margin:5px;
+}
 .container-title{
   padding-bottom: 0;
   text-align: center;
   color:#c50e29;
 }
-
-.datacenter-card-2-title{
-  color: #c50e29;
-}
-
-
-.datacenter-card-2-paragraph{
-  color: black;
-}
-
 
 .container-vertical-padding{
   height: fit-content;
@@ -112,3 +87,7 @@ div.container > div.d-flex.justify-content-evenly > button{
   width: fit-content;
 }
 
+.front-face, .back-face{
+  height: inherit;
+  padding-bottom: 30px;
+}

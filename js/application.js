@@ -1,35 +1,37 @@
-//import * as $ from "simple-pagination"
-const items = $('.application-cards-columns');
-const numItems = items.length;
-const perPage = 8;
-items.slice(perPage).hide();
-$('#pagination-container').pagination({
-    items: numItems,
-    itemsOnPage: perPage,
-    prevText: "<",
-    nextText: ">",
-    onPageClick: function (pageNumber) {
-        const showFrom = perPage * (pageNumber - 1);
-        const showTo = showFrom + perPage;
-        items.hide().slice(showFrom, showTo).show();
-        //
-        for (let i = 0; i < items.length; i++) {
-            const card = items[i].querySelector('.card');
-            card.querySelector('.front-face').style.height = 'fit-content';
-            card.querySelector('.back-face').style.height = 'fit-content';
-            const frontHeight = card.querySelector('.front-face').offsetHeight;
-            const backHeight = card.querySelector('.back-face').offsetHeight;
-            if (frontHeight < backHeight) {
-                card.style.height = backHeight.toString() + 'px';
-                card.querySelector('.front-face').style.height = backHeight.toString() + 'px';
-            }
-            else {
-                card.style.height = frontHeight.toString() + 'px';
-                card.querySelector('.back-face').style.height = frontHeight.toString() + 'px';
+function applicationsCard() {
+    const items = $('.application-cards-columns');
+    const numItems = items.length;
+    const perPage = 8;
+    items.slice(perPage).hide();
+    $('#pagination-container').pagination({
+        items: numItems,
+        itemsOnPage: perPage,
+        prevText: "<",
+        nextText: ">",
+        onPageClick: function (pageNumber) {
+            const showFrom = perPage * (pageNumber - 1);
+            const showTo = showFrom + perPage;
+            items.hide().slice(showFrom, showTo).show();
+            //
+            for (let i = 0; i < items.length; i++) {
+                const card = items[i].querySelector('.card');
+                card.querySelector('.front-face').style.height = 'fit-content';
+                card.querySelector('.back-face').style.height = 'fit-content';
+                const frontHeight = card.querySelector('.front-face').offsetHeight;
+                const backHeight = card.querySelector('.back-face').offsetHeight;
+                if (frontHeight < backHeight) {
+                    card.style.height = backHeight.toString() + 'px';
+                    card.querySelector('.front-face').style.height = backHeight.toString() + 'px';
+                }
+                else {
+                    card.style.height = frontHeight.toString() + 'px';
+                    card.querySelector('.back-face').style.height = frontHeight.toString() + 'px';
+                }
             }
         }
-    }
-});
+    });
+    console.log('end app pagination');
+}
 const input = document.querySelector('#myFilter');
 input.addEventListener('input', cardSearch);
 function cardSearch(e) {
