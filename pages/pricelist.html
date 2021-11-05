@@ -39,7 +39,7 @@
   <link href="./../css/footer.css" rel="stylesheet">
   <link href="./../css/buttons.css" rel="stylesheet">
   <link href="./../css/card-flipper.css" rel="stylesheet">
-  <link href="./../css/listino.css" rel="stylesheet">
+  <link href="./../css/pricelist.css" rel="stylesheet">
 </head>
 
 <body>
@@ -56,7 +56,7 @@
     </div>
   </div>
   
-<div class="container container-vertical-padding">
+<div class="container container-vertical-padding" id='connection-check'>
   <h3 class="container-title">Verifica la tua connessione ottimale</h3>
   <div class="input-group">
     <input type="text" id="Comune" aria-label="Comune" placeholder="Comune" class="form-control">
@@ -70,17 +70,9 @@
   </div>
 </div>
 
-<div class="container container-vertical-padding">
+<div class="container-fluid container-vertical-padding">
   <h2 class="container-title">Mostra le risorse</h2>
-  <div class="d-flex justify-content-evenly">
-    <button class="btn btn-primary button-white-to-black" id="RAM" type="button" onclick="changeCard(event)">RAM</button>
-    <button class="btn btn-primary button-white-to-black" id="CPU" type="button" onclick="changeCard(event)">CPU</button>
-    <button class="btn btn-primary button-white-to-black" id="GPU" type="button" onclick="changeCard(event)">GPU</button>
-    <button class="btn btn-primary button-white-to-black" id="Storage" type="button" onclick="changeCard(event)">Storage</button>
-    <button class="btn btn-primary button-white-to-black" id="Rete" type="button" onclick="changeCard(event)">Rete</button>
-    <button class="btn btn-primary button-white-to-black" id="Connettività internet" type="button" onclick="changeCard(event)">Connettività Internet</button>
-    <button class="btn btn-primary button-white-to-black" id="FPGA" type="button" onclick="changeCard(event)">FPGA</button>
-    <button class="btn btn-primary button-white-to-black" id="NVDIMN" type="button" onclick="changeCard(event)">NVDIMN</button>
+  <div class="d-flex justify-content-evenly" id="resources-button">
   </div>
 
 </div>
@@ -93,8 +85,8 @@
 
   <script src="./../js/navbar.js"></script>
   <script src="./../js/footer.js"></script>
-  <script src="./../js/listinoConnectionControl.js"></script>
-  <script src="./../js/listinoResourcesCards.js"></script>
+  <script src="./../js/pricelist.js"></script>
+  <script src="./../js/navbarLanguage.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
 
 
