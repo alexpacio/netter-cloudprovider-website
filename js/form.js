@@ -185,7 +185,36 @@ function collectUserData() {
         }
         else {
             if (password.value === passwordCheck.value) {
-                printCompany(nomeAzienda.value, settoreDiBusines.value, partitaIVA.value, telefono.value, stato.value, regione.value, citta.value, comune.value, indirizzo.value, logoAzienda.value, immagineAziendale1.value, immagineAziendale2.value, immagineAziendale3.value, nomeUtente.value, cognomeUtente.value, username.value, password.value, email.value, metodoInvioNotifiche.value, telefonoUser.value, fusoOrario.value, lingua.value);
+                //user
+                let newUser;
+                newUser.nomeUtente = nomeUtente.value;
+                newUser.cognomeUtente = cognomeUtente.value;
+                newUser.username = username.value;
+                newUser.password = password.value;
+                newUser.email = email.value;
+                newUser.metodoInvioNotifiche = metodoInvioNotifiche.value;
+                newUser.telefonoUser = telefonoUser.value;
+                newUser.fusoOrario = fusoOrario.value;
+                newUser.lingua = lingua.value;
+                //company
+                let newCompany;
+                newCompany.nomeAzienda = nomeAzienda.value;
+                newCompany.settoreDiBusines = settoreDiBusines.value;
+                newCompany.partitaIVA = partitaIVA.value;
+                newCompany.telefono = telefono.value;
+                newCompany.stato = stato.value;
+                newCompany.regione = regione.value;
+                newCompany.citta = citta.value;
+                newCompany.comune = comune.value;
+                newCompany.indirizzo = indirizzo.value;
+                newCompany.logoAzienda = logoAzienda.value;
+                newCompany.immagineAziendale1 = immagineAziendale1.value;
+                newCompany.immagineAziendale2 = immagineAziendale2.value;
+                newCompany.immagineAziendale3 = immagineAziendale3.value;
+                newCompany.user = newUser;
+                nomeUtente.value, cognomeUtente.value, username.value, password.value,
+                    email.value, metodoInvioNotifiche.value, telefonoUser.value, fusoOrario.value, lingua.value;
+                printCompany(newCompany);
             }
             else {
                 console.log(password.value + ' ' + passwordCheck.value);
@@ -197,26 +226,26 @@ function collectUserData() {
         language.textContent === 'IT' ? window.alert("si deve accettare il trattamento dei dati personali!!") : window.alert("you need to accept the personal data treatment!!");
     }
 }
-function printCompany(nomeAzienda, settoreDiBusines, partitaIVA, telefono, stato, regione, citta, comune, indirizzo, logoAzienda, immagineAziendale1, immagineAziendale2, immagineAziendale3, nomeUtente, cognomeUtente, username, password, email, metodoInvioNotifiche, telefonoUser, fusoOrario, lingua) {
-    console.log('AZIENDA: ' + nomeAzienda);
-    console.log('Settore: ' + settoreDiBusines + '  p. IVA: ' + partitaIVA + '  Telefono: ' + telefono);
-    console.log('Indirizzo: ' + stato + ' ' + regione + ' ' + citta + ' ' + comune + ' ' + indirizzo);
-    if (logoAzienda !== "") {
-        console.log("logo: " + logoAzienda);
+function printCompany(company) {
+    console.log('AZIENDA: ' + company.nomeAzienda);
+    console.log('Settore: ' + company.settoreDiBusines + '  p. IVA: ' + company.partitaIVA + '  Telefono: ' + company.telefono);
+    console.log('Indirizzo: ' + company.stato + ' ' + company.regione + ' ' + company.citta + ' ' + company.comune + ' ' + company.indirizzo);
+    if (company.logoAzienda !== "") {
+        console.log("logo: " + company.logoAzienda);
     }
-    if (immagineAziendale1 !== "") {
-        console.log("immagine: " + immagineAziendale1);
+    if (company.immagineAziendale1 !== "") {
+        console.log("immagine: " + company.immagineAziendale1);
     }
-    if (immagineAziendale2 !== "") {
-        console.log("immagine: " + immagineAziendale2);
+    if (company.immagineAziendale2 !== "") {
+        console.log("immagine: " + company.immagineAziendale2);
     }
-    if (immagineAziendale3 !== "") {
-        console.log("immagine: " + immagineAziendale3);
+    if (company.immagineAziendale3 !== "") {
+        console.log("immagine: " + company.immagineAziendale3);
     }
-    console.log('UTENTE: ' + nomeUtente + ' ' + cognomeUtente);
-    console.log('username: ' + username + '   password: ' + password);
-    console.log('email: ' + email + ' telefono ' + nomeUtente + ': ' + telefonoUser);
-    console.log('notifiche: ' + metodoInvioNotifiche + ' fuso orario: ' + fusoOrario + ' lingua: ' + lingua);
+    console.log('UTENTE: ' + company.user.nomeUtente + ' ' + company.user.cognomeUtente);
+    console.log('username: ' + company.user.username + '   password: ' + company.user.password);
+    console.log('email: ' + company.user.email + ' telefono ' + company.user.nomeUtente + ': ' + company.user.telefonoUser);
+    console.log('notifiche: ' + company.user.metodoInvioNotifiche + ' fuso orario: ' + company.user.fusoOrario + ' lingua: ' + company.user.lingua);
 }
 function changeLanguage(language) {
     if (language === "IT") {
