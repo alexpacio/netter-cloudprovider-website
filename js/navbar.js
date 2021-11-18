@@ -5,9 +5,9 @@ document.getElementById('navbar-container').appendChild(navbar);
 var navbarContainer = document.createElement('div');
 navbarContainer.className += 'container-fluid';
 navbar.appendChild(navbarContainer);
-var navbarBrand=document.createElement('a');
-navbarBrand.className+='navbar-brand';
-navbarBrand.href=isHomepage?'./':'./../';
+var navbarBrand = document.createElement('a');
+navbarBrand.className += 'navbar-brand';
+navbarBrand.href = isHomepage ? './index.html' : './../index.html';
 navbarContainer.appendChild(navbarBrand);
 var brandImg = document.createElement('img');
 brandImg.src = isHomepage ? './img/svg/logonetterULTIMO.svg' : './../img/svg/logonetterULTIMO.svg';
@@ -117,7 +117,6 @@ navbarButton.id = "navbar-button";
 navbarButton.innerHTML = 'Inizia ora';
 navbarButton.onclick = function () {
     window.open(isHomepage ? './pages/form.html' : './form.html');
-    //window.location.href=isHomepage?'./pages/form.html':'./form.html';
 };
 var languageButton = document.createElement('button');
 languageButton.className += 'btn btn-sm language-button';
@@ -137,3 +136,7 @@ for (let i = 0; i < navItems.length; i++) {
     }
 }
 document.getElementById('navbar-container').style.height = navbar.offsetHeight.toString() + 'px';
+/*
+function getLang():string{
+  return  document.querySelector('.btn.btn-sm.language-button').innerHTML;
+}*/ 

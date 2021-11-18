@@ -1,4 +1,6 @@
+
 const isHomepage:boolean=! window.location.href.includes('/pages/');
+
 
 var navbar:HTMLElement=document.createElement('nav');
 navbar.className+='navbar navbar-expand-custom navbar-dark fixed-top bg-dark';
@@ -141,4 +143,7 @@ for(let i:number=0;i<navItems.length;i++){
 
 document.getElementById('navbar-container').style.height=navbar.offsetHeight.toString()+'px';
 
-
+/*
+function getLang():string{
+  return  document.querySelector('.btn.btn-sm.language-button').innerHTML;
+}*/
