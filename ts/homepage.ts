@@ -8,7 +8,13 @@ for(let i:number=0;i<cardsContainerItems.length;i++){
   if(i>nItemsToShow-1){
   cardsContainerItems[i].style.display='none';
   }
-}}
+}
+if(document.querySelector('.btn.btn-sm.language-button').innerHTML=='IT'){
+  changeLanguage('EN')
+}
+}
+
+
 
 
 function showAllApplication(action:string):void{

@@ -1,157 +1,23 @@
-/*console.log('app')
-interface AppData{
-  appNameIta:string;
-  appNameEng:string;
-  descriptionIta:string;
-  descriptionEng:string;
-}
+console.log('app');
 fetch("../data_from_backend/applications.json")
-  .then(function (response) {
-    return response.json()
-  })
-  .then(function (data) {
-   const applicationsData = data as AppData[];
-  //  console.log(resources)
-   for(let i=0;i<applicationsData.length;i++){
-     createAppFlipCard(applicationsData[i].appNameIta,applicationsData[i].appNameEng,applicationsData[i].descriptionIta,applicationsData[i].descriptionEng);
-   }
-
-  if(window.localURL.includes('/pages/')){
-    console.log('app called')
-    applicationsCard();
-  }else{
-    console.log('home called')
-    homepageCard();
-  }
-  })*/
-var loremIpsumText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." +
-    " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-const englishText = "This is a plceholder for a text area. It's not supposed to say anything, is just here to take some space as an example for a future real text " +
-    "that might be longer or shorter, like the lorem ipsum text but in english to see a different language.";
-const app1 = {
-    appNameIta: "Server di Posta",
-    appNameEng: "Mail Server",
-    descriptionIta: loremIpsumText,
-    descriptionEng: englishText
-};
-const app2 = {
-    appNameIta: "Database SQL",
-    appNameEng: "Database SQL",
-    descriptionIta: loremIpsumText,
-    descriptionEng: englishText
-};
-const app3 = {
-    appNameIta: "Centralino Voip",
-    appNameEng: "Voip Caller",
-    descriptionIta: loremIpsumText,
-    descriptionEng: englishText
-};
-const app4 = {
-    appNameIta: "Lorem Ipsum 1",
-    appNameEng: "English Title 1",
-    descriptionIta: loremIpsumText,
-    descriptionEng: englishText
-};
-const app5 = {
-    appNameIta: "Lorem Ipsum 2",
-    appNameEng: "English Title 2",
-    descriptionIta: loremIpsumText,
-    descriptionEng: englishText
-};
-const app6 = {
-    appNameIta: "Lorem Ipsum 3",
-    appNameEng: "English Title 3",
-    descriptionIta: loremIpsumText,
-    descriptionEng: englishText
-};
-const app7 = {
-    appNameIta: "Lorem Ipsum 4",
-    appNameEng: "English Title 4",
-    descriptionIta: loremIpsumText,
-    descriptionEng: englishText
-};
-const app8 = {
-    appNameIta: "Lorem Ipsum 5",
-    appNameEng: "English Title 5",
-    descriptionIta: loremIpsumText,
-    descriptionEng: englishText
-};
-const app9 = {
-    appNameIta: "Lorem Ipsum 6",
-    appNameEng: "English Title 6",
-    descriptionIta: loremIpsumText,
-    descriptionEng: englishText
-};
-const app10 = {
-    appNameIta: "Lorem Ipsum 7",
-    appNameEng: "English Title 7",
-    descriptionIta: loremIpsumText,
-    descriptionEng: englishText
-};
-const app11 = {
-    appNameIta: "Lorem Ipsum 8",
-    appNameEng: "English Title 8",
-    descriptionIta: loremIpsumText,
-    descriptionEng: englishText
-};
-const app12 = {
-    appNameIta: "Lorem Ipsum 9",
-    appNameEng: "English Title 9",
-    descriptionIta: loremIpsumText,
-    descriptionEng: englishText
-};
-const applicationsData = [app1, app2, app3, app4, app5, app6, app7, app8, app9, app10, app11, app12];
-for (let i = 0; i < applicationsData.length; i++) {
-    createAppFlipCard(applicationsData[i].appNameIta, applicationsData[i].appNameEng, applicationsData[i].descriptionIta, applicationsData[i].descriptionEng);
-}
-if (window.localURL.includes('/pages/')) {
-    console.log('app called');
-    // applicationsCard();
-    const items = $('.application-cards-columns');
-    const numItems = items.length;
-    const perPage = 8;
-    items.slice(perPage).hide();
-    $('#pagination-container').pagination({
-        items: numItems,
-        itemsOnPage: perPage,
-        prevText: "<",
-        nextText: ">",
-        onPageClick: function (pageNumber) {
-            const showFrom = perPage * (pageNumber - 1);
-            const showTo = showFrom + perPage;
-            items.hide().slice(showFrom, showTo).show();
-            //
-            for (let i = 0; i < items.length; i++) {
-                const card = items[i].querySelector('.card');
-                card.querySelector('.front-face').style.height = 'fit-content';
-                card.querySelector('.back-face').style.height = 'fit-content';
-                const frontHeight = card.querySelector('.front-face').offsetHeight;
-                const backHeight = card.querySelector('.back-face').offsetHeight;
-                if (frontHeight < backHeight) {
-                    card.style.height = backHeight.toString() + 'px';
-                    card.querySelector('.front-face').style.height = backHeight.toString() + 'px';
-                }
-                else {
-                    card.style.height = frontHeight.toString() + 'px';
-                    card.querySelector('.back-face').style.height = frontHeight.toString() + 'px';
-                }
-            }
-        }
-    });
-    console.log('end app pagination');
-}
-else {
-    console.log('home called');
-    // homepageCard();
-    const cardsContainerItems = document.getElementsByClassName('application-cards-columns');
-    const nItemsToShow = 4;
-    for (let i = 0; i < cardsContainerItems.length; i++) {
-        if (i > nItemsToShow - 1) {
-            cardsContainerItems[i].style.display = 'none';
-        }
+    .then(function (response) {
+    return response.json();
+})
+    .then(function (data) {
+    const applicationsData = data;
+    //  console.log(resources)
+    for (let i = 0; i < applicationsData.length; i++) {
+        createAppFlipCard(applicationsData[i].appNameIta, applicationsData[i].appNameEng, applicationsData[i].descriptionIta, applicationsData[i].descriptionEng);
     }
-}
-//cancellare a qui
+    if (window.localURL.includes('/pages/')) {
+        console.log('app called');
+        applicationsCard();
+    }
+    else {
+        console.log('home called');
+        homepageCard();
+    }
+});
 function createAppFlipCard(titleIT, titleEN, backFaceParagraphIT, backFaceParagraphEN) {
     const isHomepage = !window.location.href.includes('/pages/');
     var newCol = document.createElement('div');

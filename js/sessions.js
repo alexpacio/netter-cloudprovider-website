@@ -22,6 +22,9 @@ const windowsDescriptionEN = '<strong>Edition:</strong>64bit Italian</br>' +
 createTemplateCard(ubuntuTitle, ubuntuDescriptionIT, ubuntuDescriptionEN);
 createTemplateCard(oracleTitle, oracleDescriptionIT, oracleDescriptionEN);
 createTemplateCard(windowsTitle, windowsDescriptionIT, windowsDescriptionEN);
+if (document.querySelector('.btn.btn-sm.language-button').innerHTML == 'IT') {
+    changeLanguage('EN');
+}
 function createTemplateCard(title, descriptionIT, descriptionEN) {
     var newRow = document.createElement('div');
     newRow.className += 'row';

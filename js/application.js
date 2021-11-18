@@ -30,6 +30,9 @@ function applicationsCard() {
             }
         }
     });
+    if (document.querySelector('.btn.btn-sm.language-button').innerHTML == 'IT') {
+        changeLanguage('EN');
+    }
     console.log('end app pagination');
 }
 const input = document.querySelector('#myFilter');

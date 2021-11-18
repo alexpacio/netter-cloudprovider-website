@@ -1,6 +1,13 @@
 
 const isHomepage:boolean=! window.location.href.includes('/pages/');
-
+let navLang:string='IT';
+if(window.location.href.includes('?lang')){
+    var queryString =window.location.search;
+    console.log(queryString);
+    let params = new URLSearchParams(queryString);
+    navLang=params.get("lang");
+    console.log(navLang);
+}
 
 var navbar:HTMLElement=document.createElement('nav');
 navbar.className+='navbar navbar-expand-custom navbar-dark fixed-top bg-dark';
@@ -124,11 +131,12 @@ navbarButton.onclick=function(){
 
 var languageButton:HTMLButtonElement=document.createElement('button');
 languageButton.className+='btn btn-sm language-button';
-languageButton.innerHTML='EN';
+navLang=='IT'?languageButton.innerHTML='EN':languageButton.innerHTML='IT';
 languageButton.type='button';
 languageButton.onclick=function(){
     changeLanguage(languageButton.textContent);
     languageButton.innerHTML==='EN'?languageButton.innerHTML='IT':languageButton.innerHTML='EN';
+    changeHref();
 }
 dFlex.appendChild(languageButton);
 dFlex.appendChild(navbarButton);
@@ -143,7 +151,38 @@ for(let i:number=0;i<navItems.length;i++){
 
 document.getElementById('navbar-container').style.height=navbar.offsetHeight.toString()+'px';
 
-/*
-function getLang():string{
-  return  document.querySelector('.btn.btn-sm.language-button').innerHTML;
-}*/
+changeHref()
+
+
+function changeHref(){ 
+       const stringDetected:string=document.querySelector('.btn.btn-sm.language-button').innerHTML;
+       const navBrand:HTMLAnchorElement=document.querySelector('nav').querySelector('.navbar-brand');
+       const navLinks:HTMLCollectionOf<HTMLAnchorElement>=(document.querySelector('nav').getElementsByClassName('nav-link')as HTMLCollectionOf<HTMLAnchorElement>);
+    
+    if(stringDetected=='EN'){
+        //lingua=italiano
+        for(let i=0;i<navLinks.length;i++){
+            if(navLinks[i].href.includes('?lang')){
+                navLinks[i].href=navLinks[i].href.slice(0,navLinks[i].href.indexOf('?'))
+            }
+            navLinks[i].href+='?lang=IT';
+        }
+        if(navBrand.href.includes('?lang')){
+            navBrand.href=navBrand.href.slice(0,navBrand.href.indexOf('?'))
+        }
+        navBrand.href+='?lang=IT';
+    } else{
+          //lingua=inglese
+          for(let i=0;i<navLinks.length;i++){
+            if(navLinks[i].href.includes('?lang')){
+                navLinks[i].href=navLinks[i].href.slice(0,navLinks[i].href.indexOf('?'))
+            }
+            navLinks[i].href+='?lang=EN';
+    }
+    if(navBrand.href.includes('?lang')){
+        navBrand.href=navBrand.href.slice(0,navBrand.href.indexOf('?'))
+    }
+    navBrand.href+='?lang=EN';
+}
+}
+

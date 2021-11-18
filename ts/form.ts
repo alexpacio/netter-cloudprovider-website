@@ -4,9 +4,6 @@ interface CompanyDetails{
   partitaIVA:string,
   telefono:string,
   stato:string,
-  regione:string,
-  citta:string ,
-  comune:string,
   indirizzo:string,
   logoAzienda:string,
   immagineAziendale1:string,
@@ -18,156 +15,19 @@ interface CompanyDetails{
   nomeUtente:string,
   cognomeUtente:string,
   username:string,
-  password:string,
-  passwordCheck:string,
+  password:string
   email:string,
   metodoInvioNotifiche:string,
   telefonoUser:string,
   fusoOrario:string,
-  lingua:string,
-  notificationMethod:string
+  lingua:string
 }
 
-const country:HTMLElement=document.getElementById('Stato');
-country.addEventListener('input', updateValue);
-
-function updateValue(e):void{
-  const input:string=e.target.value.toLowerCase();
-  if(input==='italia' || input==='italy'){
-     document.getElementById('Regione').innerHTML='<option>Seleziona...</option>'+
-     '<option>Abruzzo</option>'+
-     '<option>Basilicata</option>'+
-    ' <option>Calabria</option>'+
-    ' <option>Campania</option>'+
-    ' <option>Emilia-Romagna</option>'+
-    ' <option>Friuli Venezia Giulia</option>'+
-    ' <option>Lazio</option>'+
-   '  <option>Liguria</option>'+
-     '<option>Lombardia</option>'+
-  '   <option>Marche</option>'+
-    ' <option>Molise</option>'+
-     '<option>Piemonte</option>'+
-    ' <option>Puglia</option>'+
-    ' <option>Sardegna</option>'+
-     '<option>Sicilia</option>'+
-     '<option>Toscana</option>'+
-    ' <option>Trentino-Alto Adige</option>'+
-     '<option>Umbria</option>'+
-     "<option>Valle d'Aosta</option>"+
-   '  <option>Veneto</option>'
-   document.getElementById('Citta').innerHTML='<option selected>Seleziona...</option>'+
-   '<option>AGRIGENTO </option>'+
-  ' <option>ALESSANDRIA </option>'+
-   '<option>ANCONA </option>'+
-   '<option>AOSTA </option>'+
-   '<option>AREZZO </option>'+
-  ' <option>ASCOLI PICENO </option>'+
- '  <option>ASTI </option>'+
-'   <option>AVELLINO </option>'+
-  ' <option>BARI </option>'+
-  ' <option>BARLETTA-ANDRIA-TRANI </option>'+
- '  <option>BELLUNO </option>'+
-  ' <option>BENEVENTO </option>'+
- '  <option>BERGAMO </option>'+
- '  <option>BIELLA </option>'+
-  ' <option>BOLOGNA </option>'+
- '  <option>BOLZANO </option>'+
-  ' <option>BRESCIA </option>'+
-  ' <option>BRINDISI </option>'+
- '  <option>CAGLIARI </option>'+
-  ' <option>CALTANISSETTA </option>'+
-  ' <option>CAMPOBASSO </option>'+
-  ' <option>CARBONIA-IGLESIAS </option>'+
-  ' <option>CASERTA </option>'+
-  ' <option>CATANIA </option>'+
-  ' <option>CATANZARO </option>'+
-   '<option>CHIETI </option>'+
-  ' <option>COMO </option>'+
- '  <option>COSENZA </option>'+
-  ' <option>CREMONA </option>'+
-  ' <option>CROTONE </option>'+
-  ' <option>CUNEO </option>'+
-  ' <option>ENNA </option>'+
-   '<option>FERMO </option>'+
-   '<option>FERRARA </option>'+
-  ' <option>FIRENZE </option>'+
-   '<option>FOGGIA </option>'+
-'   <option>FORLI’-CESENA </option>'+
-  ' <option>FROSINONE </option>'+
-  ' <option>GENOVA </option>'+
-  ' <option>GORIZIA </option>'+
-  ' <option>GROSSETO </option>'+
-  ' <option>IMPERIA </option>'+
-  ' <option>ISERNIA </option>'+
- '  <option>LA SPEZIA </option>'+
-  ' <option>L’AQUILA </option>'+
-  ' <option>LATINA </option>'+
- '  <option>LECCE </option>'+
-  ' <option>LECCO </option>'+
-   '<option>LIVORNO </option>'+
-   '<option>LODI </option>'+
- '  <option>LUCCA </option>'+
- '  <option>MACERATA </option>'+
-  ' <option>MANTOVA </option>'+
-  ' <option>MASSA-CARRARA </option>'+
- '  <option>MATERA </option>'+
-  ' <option>MEDIO CAMPIDANO </option>'+
-  ' <option>MESSINA </option>'+
- '  <option>MILANO </option>'+
-  ' <option>MODENA </option>'+
-  ' <option>MONZA E BRIANZA </option>'+
- '  <option>NAPOLI </option>'+
-  ' <option>NOVARA </option>'+
-  ' <option>NUORO </option>'+
-  ' <option>OGLIASTRA </option>'+
-  ' <option>OLBIA-TEMPIO </option>'+
-'   <option>ORISTANO </option>'+
- '  <option>PADOVA </option>'+
-  ' <option>PALERMO </option>'+
- '  <option>PARMA </option>'+
-  ' <option>PAVIA </option>'+
- '  <option>PERUGIA </option>'+
- '  <option>PESARO E URBINO </option>'+
-  ' <option>PESCARA </option>'+
- '  <option>PIACENZA </option>'+
-   '<option>PISA </option>'+
-   '<option>PISTOIA </option>'+
-   '<option>PORDENONE </option>'+
-  ' <option>POTENZA </option>'+
-  ' <option>PRATO </option>'+
-   '<option>RAGUSA </option>'+
-  ' <option>RAVENNA </option>'+
-  ' <option>REGGIO CALABRIA </option>'+
-  ' <option>REGGIO EMILIA </option>'+
-  ' <option>RIETI </option>'+
- '  <option>RIMINI </option>'+
-  ' <option>ROMA </option>'+
-  ' <option>ROVIGO </option>'+
-  ' <option>SALERNO </option>'+
-   '<option>SASSARI </option>'+
-  ' <option>SAVONA </option>'+
-  ' <option>SIENA </option>'+
-   '<option>SIRACUSA </option>'+
-  ' <option>SONDRIO </option>'+
-   '<option>TARANTO </option>'+
-  ' <option>TERAMO </option>'+
-   '<option>TERNI </option>'+
-  ' <option>TORINO </option>'+
-   '<option>TRAPANI </option>'+
-   '<option>TRENTO </option>'+
-  ' <option>TREVISO </option>'+
-   '<option>TRIESTE </option>'+
-   '<option>UDINE </option>'+
-  ' <option>VARESE </option>'+
-   '<option>VENEZIA </option>'+
-   '<option>VERBANO-CUSIO-OSSOLA </option>'+
-   '<option>VERCELLI </option>'+
-   '<option>VERONA </option>'+
-   '<option>VIBO VALENTIA </option>'+
-   '<option>VICENZA </option>'+
-   '<option>VITERBO </option>'
-  }
+if(document.querySelector('.btn.btn-sm.language-button').innerHTML=='IT'){
+  changeLanguage('EN')
 }
+
+
 
 
 
@@ -179,9 +39,6 @@ function collectUserData():void{
     const partitaIVA:HTMLInputElement = document.getElementById('Partita-IVA') as HTMLInputElement;
     const telefono:HTMLInputElement = document.getElementById('Telefono') as HTMLInputElement;
     const stato:HTMLInputElement = document.getElementById('Stato') as HTMLInputElement;
-    const regione:HTMLInputElement = document.getElementById('Regione') as HTMLInputElement;
-    const citta:HTMLInputElement = document.getElementById('Citta') as HTMLInputElement;
-    const comune:HTMLInputElement = document.getElementById('Comune') as HTMLInputElement;
     const indirizzo:HTMLInputElement = document.getElementById('Indirizzo') as HTMLInputElement;
     const logoAzienda:HTMLInputElement = document.getElementById('Logo-Azienda') as HTMLInputElement;
     const immagineAziendale1:HTMLInputElement = document.getElementById('Immagine-Aziendale-1') as HTMLInputElement;
@@ -217,21 +74,34 @@ function collectUserData():void{
         }
     //if there are some empty fields they need to be filled else proceed
     if (emptyField.length > 0) {
-        language.textContent==='IT'?window.alert('COMPILARE I CAMPI:  ' + emptyField.toString()):window.alert('Fill Fields:  ' + emptyField.toString());
+        language.textContent==='EN'?window.alert('COMPILARE I CAMPI:  ' + emptyField.toString()):window.alert('Fill Fields:  ' + emptyField.toString());
     } else {
       if(password.value===passwordCheck.value){
-        //user
-        let newUser:UserData;
-        newUser.nomeUtente=nomeUtente.value;newUser.cognomeUtente=cognomeUtente.value;newUser.username=username.value;
-        newUser.password=password.value;newUser.email=email.value;newUser.metodoInvioNotifiche=metodoInvioNotifiche.value;
-        newUser.telefonoUser=telefonoUser.value;newUser.fusoOrario=fusoOrario.value;newUser.lingua=lingua.value;
-        //company
-        let newCompany:CompanyDetails;
-        newCompany.nomeAzienda=nomeAzienda.value;newCompany.settoreDiBusines=settoreDiBusines.value;
-        newCompany.partitaIVA=partitaIVA.value;newCompany.telefono=telefono.value;newCompany.stato=stato.value;
-        newCompany.regione=regione.value;newCompany.citta=citta.value;newCompany.comune=comune.value;newCompany.indirizzo=indirizzo.value;
-        newCompany.logoAzienda=logoAzienda.value;newCompany.immagineAziendale1=immagineAziendale1.value;newCompany.immagineAziendale2=immagineAziendale2.value;
-        newCompany.immagineAziendale3=immagineAziendale3.value;newCompany.user=newUser;
+
+        const newUser:UserData={
+          nomeUtente:nomeUtente.value,
+          cognomeUtente:cognomeUtente.value,
+          username:username.value,
+          password:password.value,
+          email:email.value,
+          metodoInvioNotifiche:metodoInvioNotifiche.value,
+          telefonoUser:telefonoUser.value,
+          fusoOrario:fusoOrario.value,
+          lingua:lingua.value
+        }
+        const newCompany:CompanyDetails={
+          nomeAzienda:nomeAzienda.value,
+          settoreDiBusines:settoreDiBusines.value,          
+          partitaIVA:partitaIVA.value,
+          telefono:telefono.value,
+          stato:stato.value,
+          indirizzo:indirizzo.value,
+          logoAzienda:logoAzienda.value,
+          immagineAziendale1:immagineAziendale1.value,
+          immagineAziendale2:immagineAziendale2.value,
+          immagineAziendale3:immagineAziendale3.value,
+          user:newUser
+        }
         
         nomeUtente.value,cognomeUtente.value,username.value,password.value,
         email.value,metodoInvioNotifiche.value,telefonoUser.value,fusoOrario.value,lingua.value
@@ -250,7 +120,7 @@ function collectUserData():void{
 function printCompany(company:CompanyDetails){
       console.log('AZIENDA: ' + company.nomeAzienda);
       console.log('Settore: '+ company.settoreDiBusines + '  p. IVA: '+ company.partitaIVA + '  Telefono: ' + company.telefono );
-      console.log('Indirizzo: ' + company.stato+' ' + company.regione+ ' '+ company.citta+ ' ' + company.comune+ ' '+ company.indirizzo);
+      console.log('Stato: ' + company.stato+' Indirizzo: '+ company.indirizzo);
       if(company.logoAzienda!==""){
           console.log("logo: " + company.logoAzienda);
       }
@@ -280,10 +150,8 @@ function changeLanguage(language:string){
           document.getElementById('Partita-IVA-label').textContent='Partita IVA';
           document.getElementById('Telefono-label').textContent='Telefono';
           document.getElementById('Stato-label').textContent='Stato';
-          document.getElementById('Regione-label').textContent='Regione';
-          document.getElementById('Citta-label').textContent='Citta';
-          document.getElementById('Comune-label').textContent='Comune';
           document.getElementById('Indirizzo-label').textContent='Indirizzo';
+          (document.getElementById('Indirizzo')as HTMLTextAreaElement).placeholder='Citta(PROVINCIA), via, numero civico,CAP';
           document.getElementById('Logo-Azienda-label').textContent='Logo Azienda';
           document.getElementById('Immagine-Aziendale-1-label').textContent='Immagine Aziendale 1';
           document.getElementById('Immagine-Aziendale-2-label').textContent='Immagine Aziendale 2';
@@ -315,10 +183,8 @@ function changeLanguage(language:string){
         document.getElementById('Partita-IVA-label').textContent='Company VAT Number';
         document.getElementById('Telefono-label').textContent='Phone Number';
         document.getElementById('Stato-label').textContent='Country';
-        document.getElementById('Regione-label').textContent='State';
-        document.getElementById('Citta-label').textContent='City';
-        document.getElementById('Comune-label').textContent='Council/Area';
         document.getElementById('Indirizzo-label').textContent='Address';
+        (document.getElementById('Indirizzo')as HTMLTextAreaElement).placeholder='City area/District,County,Street,Door number,Post Code';
         document.getElementById('Logo-Azienda-label').textContent='Company Logo';
         document.getElementById('Immagine-Aziendale-1-label').textContent='Company Image 1';
         document.getElementById('Immagine-Aziendale-2-label').textContent='Company Image 2';

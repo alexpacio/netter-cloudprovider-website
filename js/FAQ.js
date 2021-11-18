@@ -2,6 +2,9 @@ createFAQframe("Titolo 1", "Lorem ipsum dolor sit amet, consectetur adipiscing e
 createFAQframe("Titolo 2", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.");
 createFAQframe("Titolo 3", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.");
 createFAQframe("Titolo 4", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.");
+if (document.querySelector('.btn.btn-sm.language-button').innerHTML == 'IT') {
+    changeLanguage('EN');
+}
 function createFAQframe(title, paragraph) {
     var container = document.getElementById('FAQ-container');
     var newrow = document.createElement('div');

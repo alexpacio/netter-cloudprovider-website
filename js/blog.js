@@ -1,26 +1,15 @@
 let blogStringData;
-/*fetch("../data_from_backend/blog.json")
-.then(function (response) {
-  return response.json()
+fetch("../data_from_backend/blog.json")
+    .then(function (response) {
+    return response.json();
 })
-.then(function (data) {
-    blogStringData = data as BlogData[];
+    .then(function (data) {
+    blogStringData = data;
     createBlogPosts(blogStringData);
-})*/
-//cancella da qui
-const article1 = {
-    titleIt: "Benvenuto in NETTER",
-    titleEn: "Welcome to NETTER",
-    articleIt: "Questo è il primo articolo di Netter, per darvi il benvenuto nel nostro sistema," +
-        "il nostro servizio è in continuo aggiornamento grazie ai nostri developers che" +
-        "continuamente crecano di migliorare il sistema con nuoe applicazioni, device piu semplici da usare ecc..",
-    articleEn: "This is Netter first article, to welcome you in the Netter system, our service is " +
-        "constantly upgraded thanks to our developers that are working to develop new applications" +
-        ", devices easier to use ecc.."
-};
-blogStringData = [article1];
-createBlogPosts(blogStringData);
-//cancella a qui
+    if (document.querySelector('.btn.btn-sm.language-button').innerHTML == 'IT') {
+        changeLanguage('EN');
+    }
+});
 function createBlogPosts(blogData) {
     const container = document.getElementById('container-blog-cards');
     const gridSistem = document.createElement('div');

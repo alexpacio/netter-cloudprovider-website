@@ -22,6 +22,10 @@ createDeviceFlipCard("flip-card-container-2","Componenti scalabili","Scalable Co
 createDeviceFlipCard("flip-card-container-2","Senori per consultare dati in uscita","Sensor to check output data",imgUrl6, loremIpsumText,descriptionEN);
 
 
+if(document.querySelector('.btn.btn-sm.language-button').innerHTML=='IT'){
+  changeLanguage('EN')
+}
+
 
 
 function createDeviceFlipCard(parentEl:string,titleIT:string,titleEN:string,imgLink:string,backFaceParagraphIT:string,backFaceParagraphEN:string):void{

@@ -7,6 +7,9 @@ function homepageCard() {
             cardsContainerItems[i].style.display = 'none';
         }
     }
+    if (document.querySelector('.btn.btn-sm.language-button').innerHTML == 'IT') {
+        changeLanguage('EN');
+    }
 }
 function showAllApplication(action) {
     const buttonShowAll = document.getElementById('show-all');

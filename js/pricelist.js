@@ -9,138 +9,18 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 let resources;
 let lines;
-/*fetch("../data_from_backend/resources.json")
-  .then(function (response) {
-    return response.json()
-  })
-  .then(function (data) {
-    resources = data as ResourcesData[];
-  //  console.log(resources)
+fetch("../data_from_backend/resources.json")
+    .then(function (response) {
+    return response.json();
+})
+    .then(function (data) {
+    resources = data;
+    //  console.log(resources)
     resourceButtonCreator(resources);
-  })*/
-//cancella da qui 
-var url = "https://http://127.0.0.1:5500";
-var loremIpsumText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." +
-    " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-const englishText = "This is a plceholder for a text area. It's not supposed to say anything, is just here to take some space as an example for a future real text " +
-    "that might be longer or shorter, like the lorem ipsum text but in english to see a different language.";
-const ram = {
-    resourceNameIta: "RAM",
-    resourceNameEng: "RAM",
-    resourceOptions: ["8GB", "16GB", "32GB"],
-    resourceComponents: ["DRAM (Dynamic)", "SRAM (Static)"],
-    showWeeklyMonthlyPrice: [false, false],
-    datacenter: [{
-            title: "Datacenter 1",
-            optionPrice: [1.4, 1.8, 2.2],
-            descriptionIta: loremIpsumText,
-            descriptionEng: englishText
-        },
-        {
-            title: "Datacenter 2",
-            optionPrice: [1.2, 1.3, 1.4],
-            descriptionIta: loremIpsumText,
-            descriptionEng: englishText
-        }]
-};
-const cpu = {
-    resourceNameIta: "CPU",
-    resourceNameEng: "CPU",
-    resourceOptions: ["EMC7701", "EMC7702", "Zeon"],
-    resourceComponents: ["Core 1/64", "Min reservation", "Max reservation", "Weight - slot"],
-    showWeeklyMonthlyPrice: [true, false, false],
-    datacenter: [{
-            title: "Datacenter 1",
-            optionPrice: [1.4, 1.8, 2.2],
-            descriptionIta: loremIpsumText,
-            descriptionEng: englishText
-        },
-        {
-            title: "Datacenter 2",
-            optionPrice: [1.2, 1.4, 1.6],
-            descriptionIta: loremIpsumText,
-            descriptionEng: englishText
-        }]
-};
-const gpu = {
-    resourceNameIta: "GPU",
-    resourceNameEng: "GPU",
-    resourceOptions: ["Nvidia GeForce RTX 3060 ", "AMD Radeon RX 6800", "AMD Radeon RX 6900 XT"],
-    resourceComponents: ["Min reservation", "Max reservation", "Weight - slot"],
-    showWeeklyMonthlyPrice: [false, false, true],
-    datacenter: [{
-            title: "Datacenter 1",
-            optionPrice: [2.2, 2.6, 3.2],
-            descriptionIta: loremIpsumText,
-            descriptionEng: englishText
-        },
-        {
-            title: "Datacenter 2",
-            optionPrice: [1.5, 2.0, 2.5],
-            descriptionIta: loremIpsumText,
-            descriptionEng: englishText
-        }]
-};
-const storage = {
-    resourceNameIta: "Storage",
-    resourceNameEng: "Storage",
-    resourceOptions: ["SSD Flash Drive Arrays. ", "Cloud Storage", "Backup Software"],
-    resourceComponents: ["Min reservation", "Max reservation", "Weight - slot"],
-    showWeeklyMonthlyPrice: [false, false, false],
-    datacenter: [{
-            title: "Datacenter 1",
-            optionPrice: [1.4, 1.7, 2.0],
-            descriptionIta: loremIpsumText,
-            descriptionEng: englishText
-        },
-        {
-            title: "Datacenter 2",
-            optionPrice: [1.2, 1.3, 1.4],
-            descriptionIta: loremIpsumText,
-            descriptionEng: englishText
-        }]
-};
-const rete = {
-    resourceNameIta: "Rete",
-    resourceNameEng: "Cluster",
-    resourceOptions: ["VPN"],
-    resourceComponents: ["Prezzo"],
-    showWeeklyMonthlyPrice: [true],
-    datacenter: [{
-            title: "Datacenter 1",
-            optionPrice: [1.5],
-            descriptionIta: loremIpsumText,
-            descriptionEng: englishText
-        },
-        {
-            title: "Datacenter 2",
-            optionPrice: [1.3],
-            descriptionIta: loremIpsumText,
-            descriptionEng: englishText
-        }]
-};
-const connettivita = {
-    resourceNameIta: "Connettività Internet",
-    resourceNameEng: "Internet Connection",
-    resourceOptions: ["WiFi", "Wlan", "WiFi+Wlan"],
-    resourceComponents: ["Prezzo"],
-    showWeeklyMonthlyPrice: [true],
-    datacenter: [{
-            title: "Datacenter 1",
-            optionPrice: [3.0, 3.2, 3.5],
-            descriptionIta: loremIpsumText,
-            descriptionEng: englishText
-        },
-        {
-            title: "Datacenter 2",
-            optionPrice: [2.5, 2.75, 3.0],
-            descriptionIta: loremIpsumText,
-            descriptionEng: englishText
-        }]
-};
-resources = [ram, cpu, gpu, storage, rete, connettivita];
-resourceButtonCreator(resources);
-//cancella a qui
+    if (document.querySelector('.btn.btn-sm.language-button').innerHTML == 'IT') {
+        changeLanguage('EN');
+    }
+});
 function resourceButtonCreator(resources) {
     const resourceButtonContainer = document.getElementById('resources-button');
     let buttonElement = [];

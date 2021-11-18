@@ -1,70 +1,17 @@
-/*
 fetch("../data_from_backend/softwares.json")
-  .then(function (response) {
-    return response.json()
-  })
-  .then(function (data) {
-   const softwareData = data as SoftwareData[];
-  //  console.log(resources)
-   for(let i=0;i<softwareData.length;i++){
-     createFlipCard(softwareData[i].softwareNameIta,softwareData[i].descriptionIta,softwareData[i].descriptionEng);
-   }
-  })*/
-//cancellare da qui
-var loremIpsumText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." +
-    " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-const englishText = "This is a plceholder for a text area. It's not supposed to say anything, is just here to take some space as an example for a future real text " +
-    "that might be longer or shorter, like the lorem ipsum text but in english to see a different language.";
-const software1 = {
-    softwareNameIta: "Cloud Client",
-    descriptionIta: loremIpsumText,
-    descriptionEng: englishText
-};
-const software2 = {
-    softwareNameIta: "Active Directory Agent",
-    descriptionIta: loremIpsumText,
-    descriptionEng: englishText
-};
-const software3 = {
-    softwareNameIta: "RDP Client",
-    descriptionIta: loremIpsumText,
-    descriptionEng: englishText
-};
-const software4 = {
-    softwareNameIta: "Migration Tool",
-    descriptionIta: loremIpsumText,
-    descriptionEng: englishText
-};
-const software5 = {
-    softwareNameIta: "Mobile App",
-    descriptionIta: loremIpsumText,
-    descriptionEng: englishText
-};
-const software6 = {
-    softwareNameIta: "Netter OS for Devices",
-    descriptionIta: loremIpsumText,
-    descriptionEng: englishText
-};
-const software7 = {
-    softwareNameIta: "Lifecycle Agent",
-    descriptionIta: loremIpsumText,
-    descriptionEng: englishText
-};
-const software8 = {
-    softwareNameIta: "Spice Agent",
-    descriptionIta: loremIpsumText,
-    descriptionEng: englishText
-};
-const software9 = {
-    softwareNameIta: "Indirect Display Windows Driver",
-    descriptionIta: loremIpsumText,
-    descriptionEng: englishText
-};
-const softwareData = [software1, software2, software3, software4, software5, software6, software7, software8, software9];
-for (let i = 0; i < softwareData.length; i++) {
-    createFlipCard(softwareData[i].softwareNameIta, softwareData[i].descriptionIta, softwareData[i].descriptionEng);
-}
-//cancellare a qui
+    .then(function (response) {
+    return response.json();
+})
+    .then(function (data) {
+    const softwareData = data;
+    //  console.log(resources)
+    for (let i = 0; i < softwareData.length; i++) {
+        createFlipCard(softwareData[i].softwareNameIta, softwareData[i].descriptionIta, softwareData[i].descriptionEng);
+    }
+    if (document.querySelector('.btn.btn-sm.language-button').innerHTML == 'IT') {
+        changeLanguage('EN');
+    }
+});
 const itemsCards = document.getElementsByClassName('card');
 //function that resizes cards when web-page gets resized (examole on phone rotation)
 window.addEventListener('resize', function (event) {

@@ -14,6 +14,9 @@ createDeviceFlipCard("flip-card-container", "Veloce", "Fast", imgUrl3, loremIpsu
 createDeviceFlipCard("flip-card-container", "Sicuro", "Secure", imgUrl4, loremIpsumText, descriptionEN);
 createDeviceFlipCard("flip-card-container-2", "Componenti scalabili", "Scalable Components", imgUrl5, loremIpsumText, descriptionEN);
 createDeviceFlipCard("flip-card-container-2", "Senori per consultare dati in uscita", "Sensor to check output data", imgUrl6, loremIpsumText, descriptionEN);
+if (document.querySelector('.btn.btn-sm.language-button').innerHTML == 'IT') {
+    changeLanguage('EN');
+}
 function createDeviceFlipCard(parentEl, titleIT, titleEN, imgLink, backFaceParagraphIT, backFaceParagraphEN) {
     var newCol = document.createElement('div');
     newCol.className += 'col d-flex justify-content-center app-column';

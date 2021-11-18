@@ -3,7 +3,7 @@ interface SoftwareData{
   descriptionIta:string;
   descriptionEng:string;
 }
-/*
+
 fetch("../data_from_backend/softwares.json")
   .then(function (response) {
     return response.json()
@@ -14,68 +14,11 @@ fetch("../data_from_backend/softwares.json")
    for(let i=0;i<softwareData.length;i++){
      createFlipCard(softwareData[i].softwareNameIta,softwareData[i].descriptionIta,softwareData[i].descriptionEng);
    }
-  })*/
 
-  //cancellare da qui
-  var loremIpsumText:string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." +
-  " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-  const englishText:string = "This is a plceholder for a text area. It's not supposed to say anything, is just here to take some space as an example for a future real text " +
-  "that might be longer or shorter, like the lorem ipsum text but in english to see a different language.";
-
-
-
-const software1:SoftwareData={
-    softwareNameIta:"Cloud Client",
-    descriptionIta:loremIpsumText,
-    descriptionEng:englishText
+if(document.querySelector('.btn.btn-sm.language-button').innerHTML=='IT'){
+  changeLanguage('EN')
 }
-const software2:SoftwareData={
-    softwareNameIta:"Active Directory Agent",
-    descriptionIta:loremIpsumText,
-    descriptionEng:englishText
-}
-const software3:SoftwareData={
-    softwareNameIta:"RDP Client",
-    descriptionIta:loremIpsumText,
-    descriptionEng:englishText
-}
-const software4:SoftwareData={
-    softwareNameIta:"Migration Tool",
-    descriptionIta:loremIpsumText,
-    descriptionEng:englishText
-}
-const software5:SoftwareData={
-    softwareNameIta:"Mobile App",
-    descriptionIta:loremIpsumText,
-    descriptionEng:englishText
-}
-const software6:SoftwareData={
-    softwareNameIta:"Netter OS for Devices",
-    descriptionIta:loremIpsumText,
-    descriptionEng:englishText
-}
-const software7:SoftwareData={
-    softwareNameIta:"Lifecycle Agent",
-    descriptionIta:loremIpsumText,
-    descriptionEng:englishText
-}
-const software8:SoftwareData={
-    softwareNameIta:"Spice Agent",
-    descriptionIta:loremIpsumText,
-    descriptionEng:englishText
-}
-const software9:SoftwareData={
-    softwareNameIta:"Indirect Display Windows Driver",
-    descriptionIta:loremIpsumText,
-    descriptionEng:englishText
-}
-
-const softwareData:SoftwareData[]=[software1,software2,software3,software4,software5,software6,software7,software8,software9];
-
-for(let i=0;i<softwareData.length;i++){
-  createFlipCard(softwareData[i].softwareNameIta,softwareData[i].descriptionIta,softwareData[i].descriptionEng);
-}
-  //cancellare a qui
+  })
 
 
 
